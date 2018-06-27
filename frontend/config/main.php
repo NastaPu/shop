@@ -16,8 +16,23 @@ return [
             'csrfParam' => '_csrf-frontend',
             'cookieValidationKey' => $params['cookieValidationKey'],
         ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => true,
+            /*'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'prakticshop@yandex.ru',
+                'password' => 'shopshop',
+                'port' => '465',
+                'encryption' => 'ssl',
+                //prakticshop
+            ],*/
+
+
+         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\entities\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity', 'httpOnly' => true, 'domain' =>$params['cookieDomain']],
         ],
