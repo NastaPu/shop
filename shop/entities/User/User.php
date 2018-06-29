@@ -1,11 +1,13 @@
 <?php
-namespace common\entities;
+namespace shop\entities\User;
 
+use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use shop\entities\User\Network;
 
 /**
  * User model
@@ -33,18 +35,36 @@ class User extends ActiveRecord implements IdentityInterface
         $user->email = $email;
         $user->setPassword($password);
         $user->created_at = time();
-        $user->status = self::STATUS_ACTIVE;
-        //->generateEmailConfirmToken();
+        $user->status = self::STATUS_WAIT;
+        $user->email_confirm_token = Yii::$app->security->generateRandomString();
         $user->generateAuthKey();
         return $user;
     }
 
+    public function confirmSignup():void
+    {
+        if(!$this->isWait()) {
+            throw new \DomainException("User active");
+        }
+        $this->status = self::STATUS_ACTIVE;
+        $this->email_confirm_token = null;
+    }
+
+    public static function networkSignup($network, $identity):self
+    {
+        $user = new User();
+        $user->created_at = time();
+        $user->status = self::STATUS_ACTIVE;
+        $user->generateAuthKey();
+        $user->networks = [Network::create($network, $identity)];
+        return $user;
+    }
     public function requestPasswordReset(): void
     {
         if (!empty($this->password_reset_token) && self::isPasswordResetTokenValid($this->password_reset_token)) {
-           throw new \DomainException('You have already reset your password');
+            throw new \DomainException('You have already reset your password');
         }
-        $this->password_reset_token = Yii::$app->security->generateRandomString(). '_' .time();
+        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
     }
 
     public function resetPassword($password): void
@@ -53,10 +73,21 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    public function isActive():bool
+    public function isActive(): bool
     {
         return $this->status === self::STATUS_ACTIVE;
     }
+
+    public function isWait() :bool
+    {
+        return $this->status === self::STATUS_WAIT;
+    }
+
+    public function getNetworks()
+    {
+        return $this->hasMany(Network::className(), ['user_id' => 'id']);
+    }
+
     public static function tableName()
     {
         return '{{%user}}';
@@ -66,8 +97,18 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             TimestampBehavior::className(),
+            [
+                'class' => SaveRelationsBehavior::className(),
+                'relation' => ['networks'],
+            ]
         ];
     }
+    public function transactions()
+    {
+        return [
+           self::SCENARIO_DEFAULT => self::OP_ALL,
+         ];
+     }
 
     public function rules()
     {

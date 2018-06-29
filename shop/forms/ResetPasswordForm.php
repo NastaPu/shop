@@ -1,9 +1,9 @@
 <?php
-namespace frontend\forms;
+namespace shop\forms;
 
 use yii\base\Model;
 use yii\base\InvalidParamException;
-use common\entities\User;
+use shop\entities\User\User;
 
 /**
  * Password reset form

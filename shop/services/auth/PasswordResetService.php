@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\services;
+namespace shop\services\auth;
 
-use common\entities\User;
-use frontend\forms\PasswordResetRequestForm;
-use frontend\forms\ResetPasswordForm;
+use shop\entities\User\User;
+use shop\forms\PasswordResetRequestForm;
+use shop\forms\ResetPasswordForm;
 use yii\mail\MailerInterface;
 use Yii;
 
@@ -44,7 +44,7 @@ class PasswordResetService
             throw new \RuntimeException('Sending error');
         }
     }
-    /*public function validateToken($token):void
+    public function validateToken($token):void
     {
         if (empty($token) || !is_string($token)) {
             throw new \DomainException('Password reset token cannot be blank');
@@ -52,7 +52,7 @@ class PasswordResetService
         if (!User::findByPasswordResetToken($token)) {
             throw new \DomainException('Wrong password reset token');
         }
-    }*/
+    }
     public function reset($token, ResetPasswordForm $form):void
     {
         $user = User::findByPasswordResetToken($token);
