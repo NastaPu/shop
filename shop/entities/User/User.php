@@ -17,11 +17,14 @@ use shop\entities\User\Network;
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
+ * @property string $email_confirm_token
  * @property string $auth_key
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
+ *
+ * * @property Network[] $networks
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -59,6 +62,19 @@ class User extends ActiveRecord implements IdentityInterface
         $user->networks = [Network::create($network, $identity)];
         return $user;
     }
+
+    public function attachNetwork($network, $identity)
+    {
+        $networks = $this->networks;
+        foreach ($networks as $current) {
+            if ($current->isFor($network, $identity)) {
+                throw new \DomainException('Network is already attached ');
+            }
+        }
+        $networks[] = Network::create($network, $identity);
+        $this->networks = $networks;
+    }
+
     public function requestPasswordReset(): void
     {
         if (!empty($this->password_reset_token) && self::isPasswordResetTokenValid($this->password_reset_token)) {

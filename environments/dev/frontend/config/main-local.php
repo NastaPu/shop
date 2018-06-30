@@ -1,19 +1,6 @@
 <?php
 
-$config = [
-    'components' => [
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
-            'clients' => [
-                'vk' => [
-                    'class' => 'yii\authclient\clients\VKontakte',
-                    'clientId' => '6619540',
-                    'clientSecret' => 'sZTH0myI93cj9ZVBwiyJ',
-                ],
-            ],
-        ]
-    ],
-];
+$config = [];
 
 if (!YII_ENV_TEST) {
     // configuration adjustments for 'dev' environment

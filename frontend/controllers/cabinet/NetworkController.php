@@ -1,12 +1,13 @@
 <?php
 
-namespace frontend\controllers;
+namespace frontend\controllers\cabinet;
 
 use shop\services\auth\NetworkService;
 use yii\authclient\ClientInterface;
 use yii\helpers\ArrayHelper;
 use yii\authclient\AuthAction;
 use yii\web\Controller;
+use yii\helpers\Url;
 use Yii;
 
 class NetworkController extends Controller
@@ -26,9 +27,10 @@ class NetworkController extends Controller
     public function actions()
     {
         return [
-            'auth' => [
+            'attach' => [
                 'class' => AuthAction::class,
                 'successCallback' => [$this, 'onAuthSuccess'],
+                'successUrl' => Url::to(['cabinet/default/index']),
             ],
         ];
     }
@@ -40,8 +42,9 @@ class NetworkController extends Controller
         $identity = ArrayHelper::getValue($attributes, 'id');
 
         try {
-            $user = $this->networkService->auth($network, $identity);
-            Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
+            $this->networkService->attach(Yii::$app->user->id, $network, $identity);
+            Yii::$app->session->setFlash('success', 'Network is successfully attached ');
+            //Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
         } catch (\DomainException $e) {
             Yii::$app->session->setFlash('error', $e->getMessage());
             Yii::$app->errorHandler->logException($e);

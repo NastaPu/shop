@@ -198,12 +198,12 @@ class SiteController extends Controller
     public function actionResetPassword($token)
     {
         //var_dump($token);
-      /* $service = new PasswordResetService();
+       $service = new PasswordResetService();
         try {
             $service->validateToken($token);
         } catch(\DomainException $e) {
             throw new BadRequestHttpException($e->getMessage());
-        }*/
+        }
         $form = new ResetPasswordForm();
 
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {

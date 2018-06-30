@@ -31,6 +31,12 @@ class Network extends \yii\db\ActiveRecord
         $item->identity = $identity;
         return $item;
     }
+
+    public function isFor($network, $identity)
+    {
+        return $this->network === $network && $this->identity === $identity;
+    }
+
     public static function tableName()
     {
         return 'user_network';
