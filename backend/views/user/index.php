@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use kartik\date\DatePicker;
 use yii\grid\ActionColumn;
 use shop\helpers\UserHelper;
 use shop\entities\User\User;
@@ -15,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -39,8 +39,22 @@ $this->params['breadcrumbs'][] = $this->title;
                         },
                         'format' => 'raw',
                     ],
-                    'created_at:datetime',
-
+                    [
+                        'attribute' => 'created_at',
+                        'filter' => DatePicker::widget([
+                            'model' => $searchModel,
+                            'attribute' => 'date_from',
+                            'attribute2' => 'date_to',
+                            'type' => DatePicker::TYPE_RANGE,
+                            'separator' => '-',
+                            'pluginOptions' => [
+                                'todayHighlight' => true,
+                                'autoclose'=>true,
+                                'format' => 'yyyy-mm-dd',
+                            ],
+                        ]),
+                        'format' => 'datetime',
+                    ],
                     ['class' => ActionColumn::class],
                 ],
             ]); ?>
