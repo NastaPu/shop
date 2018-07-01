@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use shop\forms\manage\UserCreateForm;
+use shop\forms\manage\UserEditForm;
 use shop\services\manage\UserManageService;
 use Yii;
 use shop\entities\User\User;
@@ -97,14 +98,20 @@ class UserController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $user = $this->findModel($id);
+        $form = new UserEditForm($user);
+        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
+            try {
+                $this->service->edit($user->id, $form);
+                return $this->redirect(['view', 'id' => $user->id]);
+            } catch (\DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
         }
-
         return $this->render('update', [
-            'model' => $model,
+            'model' => $form,
+            'user' => $user,
         ]);
     }
 
