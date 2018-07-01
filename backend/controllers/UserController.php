@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use Codeception\Lib\DependencyModule;
 use shop\forms\manage\UserCreateForm;
 use shop\forms\manage\UserEditForm;
 use shop\services\manage\UserManageService;
@@ -124,8 +125,11 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+        try {
+            $this->service->remove($id);
+        } catch (\DomainException $e) {
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
         return $this->redirect(['index']);
     }
 
