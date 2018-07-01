@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\grid\ActionColumn;
+use shop\helpers\UserHelper;
+use shop\entities\User\User;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\forms\UserSearch */
@@ -29,7 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id',
                     'username',
                     'email:email',
-                    'status',
+                    [
+                        'attribute' => 'status',
+                        'filter' => UserHelper::statusList(),
+                        'value' => function (User $model) {
+                            return UserHelper::statusLabel($model->status);
+                        },
+                        'format' => 'raw',
+                    ],
                     'created_at:datetime',
 
                     ['class' => ActionColumn::class],
