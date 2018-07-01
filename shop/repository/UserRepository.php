@@ -20,14 +20,14 @@ class UserRepository
     public function save(User $user)
     {
         if (!$user->save()) {
-            throw new \RuntimeException('Saving error ');
+            throw new \DomainException('Saving error ');
         }
     }
 
     public function getBy(array $value):User
     {
         if (!$user = User::find()->andWhere($value)->limit(1)->one()) {
-            throw new \DomainException('User not found ');
+            throw new \RuntimeException('User not found ');
         }
         return $user;
     }
