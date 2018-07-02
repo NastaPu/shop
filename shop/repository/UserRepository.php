@@ -8,7 +8,11 @@ class UserRepository
 {
     public function findByUsernameOrEmail($value): User
     {
-        return User::find()->where(['username' => $value])->one();
+        $user = User::find()->where(['username' => $value])->one();
+        if($user == null ) {
+            throw new \DomainException('Invalid login or password');
+        }
+        return $user;
        // return User::find()->andWhere(['username' => $value])->one();
     }
 
