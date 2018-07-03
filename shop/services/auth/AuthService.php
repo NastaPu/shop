@@ -3,7 +3,7 @@
 namespace shop\services\auth;
 
 use shop\entities\User\User;
-use shop\forms\LoginForm;
+use shop\forms\auth\LoginForm;
 use shop\repository\UserRepository;
 
 class AuthService
