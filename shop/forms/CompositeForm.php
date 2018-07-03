@@ -19,37 +19,26 @@ abstract class CompositeForm extends Model
     {
         $success = parent::load($data, $formName);
         foreach ($this->forms as $name => $form) {
-            if(is_array($form)) {
-                foreach ($form as $itemName => $itemForm) {
-                    $success = $this->loadInternal($data, $itemForm, $formName, $itemName) && $success;
-                }
+            if (is_array($form)) {
+                $success = Model::loadMultiple($form, $data, $formName === null ? null : $name) && $success;
             } else {
-                $success = $this->loadInternal($data, $form, $formName, $name) && $success;
+                $success = $form->load($data, $formName !== '' ? null : $name) && $success;
             }
         }
         return $success;
-    }
-
-    private function loadInternal(array $data, Model $form, $formName, $name):bool
-    {
-        return $form->load($data, $formName ? null : $name);
     }
 
     public function validate($attributeNames = null, $clearErrors = true): bool
     {
         $parentNames = array_filter($attributeNames, 'is_string');
         $success = parent::validate($parentNames, $clearErrors);
-        foreach ($this->forms as $name => $item) {
-            if(is_array($item)) {
-                foreach ($item as $itemName => $itemForm) {
-                    $innerNames = ArrayHelper::getValue($attributeNames, $itemName);
-                    $success = $itemForm->validate($innerNames, $clearErrors) && $success;
-                }
+        foreach ($this->forms as $name => $form) {
+            if (is_array($form)) {
+                $success = Model::validateMultiple($form) && $success;
             } else {
-                $innerNames = ArrayHelper::getValue($attributeNames, $name);
-                $success = $item->validate($innerNames, $clearErrors) && $success;
+                $innerNames = $attributeNames !== null ? ArrayHelper::getValue($attributeNames, $name) : null;
+                $success = $form->validate($innerNames ?: null, $clearErrors) && $success;
             }
-
         }
         return $success;
     }

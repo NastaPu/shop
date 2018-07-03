@@ -5,7 +5,7 @@ namespace shop\services\manage\Shop;
 use shop\entities\Shop\Meta;
 use shop\entities\Shop\Category;
 use shop\forms\manage\Shop\CategoryForm;
-use shop\repositories\Shop\CategoryRepository;
+use shop\repositories\CategoryRepository;
 
 class CategoryManageService
 {

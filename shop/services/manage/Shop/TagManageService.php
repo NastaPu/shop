@@ -4,7 +4,7 @@ namespace shop\services\manage\Shop;
 
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\TagForm;
-use shop\repositories\Shop\TagRepository;
+use shop\repositories\TagRepository;
 
 class TagManageService
 {
