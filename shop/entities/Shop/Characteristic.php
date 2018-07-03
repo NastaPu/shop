@@ -48,11 +48,24 @@ class Characteristic extends ActiveRecord
 
     public  function isString()
     {
-       if($this->variants == self::TYPE_STRING ) {
-           return true;
-       }
-       return false;
+       return $this->type == self::TYPE_STRING;
     }
+
+    public  function isInteger()
+    {
+        return $this->type == self::TYPE_INTEGER;
+    }
+
+    public  function isFloat()
+    {
+        return $this->type == self::TYPE_FLOAT;
+    }
+
+    public function isSelect(): bool
+    {
+        return count($this->variants) > 0;
+    }
+
     public static function tableName()
     {
         return 'shop_characteristic';

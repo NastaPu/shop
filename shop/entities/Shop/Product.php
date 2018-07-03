@@ -29,6 +29,7 @@ use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
  * @property Brand $brand
  * @property Category $category
  * @property CategoryAssignment[] $categoryAssignments
+ * @property Value[] $values
  */
 class Product extends ActiveRecord
 {
@@ -44,6 +45,32 @@ class Product extends ActiveRecord
         $product->meta = $meta;
         $product->created_at = time();
         return $product;
+    }
+
+    public function setValue($id, $value):void
+    {
+        $values = $this->values;
+        foreach ($values as $val) {
+            if ($val->isForCharacteristic($id)) {
+                $val->change($value);
+                $this->values = $values;
+                return;
+            }
+        }
+        $values[] = Value::create($id, $value);
+        $this->values = $values;
+
+    }
+
+    public function getVal($id): Value
+    {
+        $values = $this->values;
+        foreach ($values as $val) {
+            if ($val->isForCharacteristic($id)) {
+                return $val;
+            }
+        }
+        return Value::blank($id);
     }
 
     public function setPrice($new, $old): void
@@ -107,13 +134,18 @@ class Product extends ActiveRecord
         return $this->hasMany(CategoryAssignment::class, ['product_id' => 'id']);
     }
 
+    public function getValue() :ActiveQuery
+    {
+        return $this->hasMany(Value::class, ['product_id' => 'id']);
+    }
+
     public function behaviors(): array
     {
         return [
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['categoryAssignment'],
+                'relations' => ['categoryAssignment', 'value'],
             ],
         ];
     }

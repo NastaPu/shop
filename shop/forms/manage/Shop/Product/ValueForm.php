@@ -4,7 +4,6 @@ namespace shop\forms\manage\Shop\Product;
 
 use shop\entities\Shop\Characteristic;
 use shop\entities\Shop\Value;
-use shop\entities\Shop\Product;
 use yii\base\Model;
 
 /**
@@ -28,9 +27,9 @@ class ValueForm extends Model
     {
         return array_filter([
             $this->_characteristic->required ? ['value', 'required'] : false,
-           // $this->_characteristic->isString() ? ['value', 'string', 'max' => 255] : false,
-            //$this->_characteristic->isInteger() ? ['value', 'integer'] : false,
-            //$this->_characteristic->isFloat() ? ['value', 'number'] : false,
+            $this->_characteristic->isString() ? ['value', 'string', 'max' => 255] : false,
+            $this->_characteristic->isInteger() ? ['value', 'integer'] : false,
+            $this->_characteristic->isFloat() ? ['value', 'number'] : false,
             ['value', 'safe'],
         ]);
     }
