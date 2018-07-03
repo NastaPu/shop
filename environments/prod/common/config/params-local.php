@@ -1,7 +1,7 @@
 <?php
 return [
     'cookieValidationKey' => '',
-    'cookieDomain' => '.sh.dev',
-    'frontendHostInfo' => 'http://sh.dev',
-    'backendHostInfo' => 'http://backend.sh.dev'
+    'cookieDomain' => '.sh.com',
+    'frontendHostInfo' => 'http://sh.com',
+    'backendHostInfo' => 'http://backend.sh.com'
 ];

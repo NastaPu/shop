@@ -41,40 +41,4 @@ class Network extends \yii\db\ActiveRecord
     {
         return 'user_network';
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['user_id', 'identity', 'network'], 'required'],
-            [['user_id'], 'integer'],
-            [['identity'], 'string', 'max' => 255],
-            [['network'], 'string', 'max' => 16],
-            [['identity', 'network'], 'unique', 'targetAttribute' => ['identity', 'network']],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'user_id' => 'User ID',
-            'identity' => 'Identity',
-            'network' => 'Network',
-        ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getUser()
-    {
-        return $this->hasOne(User::className(), ['id' => 'user_id']);
-    }
 }

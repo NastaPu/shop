@@ -26,7 +26,7 @@ class NetworkService
         return $user;
     }
 
-    public function attach($id, $network, $identity):User
+    public function attach($id, $network, $identity):void
     {
         if ($user = $this->users->findByNetworkIdentity($network, $identity)) {
             throw  new \DomainException('This network is already there');
@@ -34,6 +34,5 @@ class NetworkService
         $user = $this->users->get($id);
         $user->attachNetwork($network, $identity);
         $this->users->save($user);
-
     }
 }

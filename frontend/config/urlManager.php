@@ -9,7 +9,7 @@ return [
             '' => 'site/index',
             'site/confirm/<token:.+>' => 'site/confirm',
             'site/reset-password/<token:.+>' => 'site/reset-password',
-            'network/<authclient:.+>' => 'network/auth',
+            //'network/<authclient:.+>' => 'network/auth',
             'cabinet' => 'cabinet/default/index',
             'cabinet/network/attach/<authclient:.+>' => 'cabinet/network/attach',
             '<_a:about|contact|signup|login|logout>' => 'site/<_a>',

@@ -6,8 +6,8 @@ use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\db\ActiveQuery;
 use yii\web\IdentityInterface;
-use shop\entities\User\Network;
 
 /**
  * User model
@@ -118,7 +118,8 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->status === self::STATUS_WAIT;
     }
 
-    public function getNetworks()
+
+    public function getNetworks(): ActiveQuery
     {
         return $this->hasMany(Network::className(), ['user_id' => 'id']);
     }
@@ -134,7 +135,7 @@ class User extends ActiveRecord implements IdentityInterface
             TimestampBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relation' => ['networks'],
+                'relations' => ['networks'],
             ]
         ];
     }

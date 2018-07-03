@@ -16,9 +16,10 @@ class UserRepository
        // return User::find()->andWhere(['username' => $value])->one();
     }
 
-    public function findByNetworkIdentity($network, $identity): User
+    public function findByNetworkIdentity($network, $identity): ?User
     {
-        return User::find()->joinWith('networks n')->andWhere(['n.network' => $network, 'n.identity' => $identity])->one();
+        $user =  User::find()->joinWith('networks n')->andWhere(['n.network' => $network, 'n.identity' => $identity])->one();
+        return $user;
     }
 
     public function save(User $user)
