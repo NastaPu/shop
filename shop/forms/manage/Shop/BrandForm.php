@@ -5,7 +5,8 @@ namespace shop\forms\manage\Shop;
 use shop\entities\Shop\Brand;
 use shop\forms\manage\MetaForm;
 use yii\base\Model;
-use shop\forms\CompositeForm;
+use shop\validators\SlugValidate;
+
 
 /**
  * @property MetaForm $meta;
@@ -34,7 +35,7 @@ class BrandForm extends Model
         return [
             [['name', 'slug'], 'required'],
             [['name', 'slug'], 'string', 'max' => 255],
-            ['slug', 'match', 'pattern' => '#^[a-z0-9_-]*$#s'],
+            ['slug', SlugValidate::class],
             [['name', 'slug'], 'unique', 'targetClass' => Brand::class, 'filter' => $this->_brand ? ['<>', 'id', $this->_brand->id] : null]
         ];
     }

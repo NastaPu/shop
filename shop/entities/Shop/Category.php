@@ -1,0 +1,101 @@
+<?php
+
+namespace shop\entities\Shop;
+
+use shop\entities\Shop\queries\CategoryQuery;
+use paulzi\nestedsets\NestedSetsBehavior;
+use shop\entities\behavior\MetaBehavior;
+use yii\db\ActiveRecord;
+
+/**
+ * This is the model class for table "shop_category".
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $slug
+ * @property string $title
+ * @property string $description
+ * @property array $meta_json
+ * @property int $lft
+ * @property int $rgt
+ * @property int $depth
+ * @property Meta $meta
+ * @property Category $parent
+ * @mixin NestedSetsBehavior
+ */
+class Category extends ActiveRecord
+{
+    public $meta;
+
+    public static function create($name, $slug, $title, $description, Meta $meta): self
+    {
+        $category = new static();
+        $category->name = $name;
+        $category->slug = $slug;
+        $category->title = $title;
+        $category->description = $description;
+        $category->meta = $meta;
+        return $category;
+    }
+
+    public function edit($name, $slug, $title, $description, Meta $meta): void
+    {
+        $this->name = $name;
+        $this->slug = $slug;
+        $this->title = $title;
+        $this->description = $description;
+        $this->meta = $meta;
+    }
+
+    public static function tableName()
+    {
+        return 'shop_category';
+    }
+
+    public function behaviors(): array
+    {
+        return [
+            MetaBehavior::className(),
+            NestedSetsBehavior::className(),
+        ];
+    }
+
+    public function transactions(): array
+    {
+        return [
+            self::SCENARIO_DEFAULT => self::OP_ALL,
+        ];
+    }
+
+    public static function find(): CategoryQuery
+    {
+        return new CategoryQuery(static::class);
+    }
+
+   /* public function rules()
+    {
+        return [
+            [['name', 'slug', 'meta_json', 'lft', 'rgt', 'depth'], 'required'],
+            [['description'], 'string'],
+            [['meta_json'], 'safe'],
+            [['lft', 'rgt', 'depth'], 'integer'],
+            [['name', 'slug', 'title'], 'string', 'max' => 255],
+            [['slug'], 'unique'],
+        ];
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'Name',
+            'slug' => 'Slug',
+            'title' => 'Title',
+            'description' => 'Description',
+            'meta_json' => 'Meta Json',
+            'lft' => 'Lft',
+            'rgt' => 'Rgt',
+            'depth' => 'Depth',
+        ];
+    }*/
+}
