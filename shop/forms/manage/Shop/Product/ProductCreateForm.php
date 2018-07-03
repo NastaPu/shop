@@ -3,7 +3,7 @@
 namespace shop\forms\manage\Shop\Product;
 
 use shop\entities\Shop\Characteristic;
-use shop\entities\Shop\Product\Product;
+use shop\entities\Shop\Product;
 use shop\forms\CompositeForm;
 use shop\forms\manage\MetaForm;
 
@@ -26,7 +26,7 @@ class ProductCreateForm extends CompositeForm
         $this->price = new PriceForm();
         $this->meta = new MetaForm();
         $this->categories = new CategoriesForm();
-        $this->photos = new PhotosForm();
+        $this->photos = new PhotoForm();
         $this->tags = new TagsForm();
         $this->values = array_map(function (Characteristic $characteristic) {
             return new ValueForm($characteristic);

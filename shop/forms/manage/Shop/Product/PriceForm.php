@@ -3,8 +3,7 @@
 namespace shop\forms\manage\Shop\Product;
 
 use yii\base\Model;
-use shop\entities\Shop\Product\Product;
-use shop\forms\manage\MetaForm;
+use shop\entities\Shop\Product;
 
 class PriceForm extends Model
 {
