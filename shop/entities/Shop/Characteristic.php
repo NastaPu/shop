@@ -46,6 +46,13 @@ class Characteristic extends ActiveRecord
         $this->sort = $sort;
     }
 
+    public  function isString()
+    {
+       if($this->variants == self::TYPE_STRING ) {
+           return true;
+       }
+       return false;
+    }
     public static function tableName()
     {
         return 'shop_characteristic';

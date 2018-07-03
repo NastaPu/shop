@@ -3,6 +3,7 @@
 namespace shop\forms\manage\Shop;
 
 use shop\entities\Shop\Brand;
+use shop\forms\CompositeForm;
 use shop\forms\manage\MetaForm;
 use yii\base\Model;
 use shop\validators\SlugValidate;
@@ -11,7 +12,7 @@ use shop\validators\SlugValidate;
 /**
  * @property MetaForm $meta;
  */
-class BrandForm extends Model
+class BrandForm extends CompositeForm
 {
     public $name;
     public $slug;
