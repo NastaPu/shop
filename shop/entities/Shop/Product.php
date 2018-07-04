@@ -4,12 +4,9 @@ namespace shop\entities\Shop;
 
 use shop\entities\behavior\MetaBehavior;
 use yii\db\ActiveRecord;
-use shop\entities\Shop\Meta;
-use shop\entities\Shop\Brand;
-use shop\entities\Shop\Category;
 use yii\db\ActiveQuery;
-use shop\entities\Shop\CategoryAssignment;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "shop_product".
@@ -30,6 +27,7 @@ use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
  * @property Category $category
  * @property CategoryAssignment[] $categoryAssignments
  * @property Value[] $values
+ * @property Photo[] $photos
  */
 class Product extends ActiveRecord
 {
@@ -46,6 +44,8 @@ class Product extends ActiveRecord
         $product->created_at = time();
         return $product;
     }
+
+    //value
 
     public function setValue($id, $value):void
     {
@@ -73,11 +73,23 @@ class Product extends ActiveRecord
         return Value::blank($id);
     }
 
+    //price
+
+    private function updatePhotos(array $photos): void
+    {
+        foreach ($photos as $i => $photo) {
+            $photo->setSort($i);
+        }
+        $this->photos = $photos;
+    }
+
     public function setPrice($new, $old): void
     {
         $this->price_new = $new;
         $this->price_old = $old;
     }
+
+    //category
 
     public function changeMainCategory($categoryId):void
     {
@@ -114,6 +126,65 @@ class Product extends ActiveRecord
         $this->categoryAssignments = [];
     }
 
+    //photo
+
+    public function addPhoto(UploadedFile $file): void
+    {
+        $photos = $this->photos;
+        $photos[] = Photo::create($file);
+        $this->updatePhotos($photos);
+    }
+
+    public function removePhoto($id): void
+    {
+        $photos = $this->photos;
+        foreach ($photos as $i => $photo) {
+            if ($photo->isIdEqualTo($id)) {
+                unset($photos[$i]);
+                $this->updatePhotos($photos);
+                return;
+            }
+        }
+        throw new \DomainException('Photo is not found.');
+    }
+
+    public function removePhotos(): void
+    {
+        $this->updatePhotos([]);
+    }
+
+    public function movePhotoUp($id): void
+    {
+        $photos = $this->photos;
+        foreach ($photos as $i => $photo) {
+            if ($photo->isIdEqualTo($id)) {
+                if ($prev = $photos[$i - 1] ?? null) {
+                    $photos[$i - 1] = $photo;
+                    $photos[$i] = $prev;
+                    $this->updatePhotos($photos);
+                }
+                return;
+            }
+        }
+        throw new \DomainException('Photo is not found');
+    }
+
+    public function movePhotoDown($id): void
+    {
+        $photos = $this->photos;
+        foreach ($photos as $i => $photo) {
+            if ($photo->isIdEqualTo($id)) {
+                if ($next = $photos[$i + 1] ?? null) {
+                    $photos[$i] = $next;
+                    $photos[$i + 1] = $photo;
+                    $this->updatePhotos($photos);
+                }
+                return;
+            }
+        }
+        throw new \DomainException('Photo is not found');
+    }
+
     public static function tableName() :string
     {
         return 'shop_product';
@@ -129,14 +200,19 @@ class Product extends ActiveRecord
         return $this->hasOne(Category::class, ['id' => 'category_id']);
     }
 
-    public function getCategoryAssignment(): ActiveQuery
+    public function getCategoryAssignments(): ActiveQuery
     {
         return $this->hasMany(CategoryAssignment::class, ['product_id' => 'id']);
     }
 
-    public function getValue() :ActiveQuery
+    public function getValues() :ActiveQuery
     {
         return $this->hasMany(Value::class, ['product_id' => 'id']);
+    }
+
+    public function getPhotos(): ActiveQuery
+    {
+        return $this->hasMany(Photo::class, ['product_id' => 'id'])->orderBy('sort');
     }
 
     public function behaviors(): array
@@ -145,7 +221,7 @@ class Product extends ActiveRecord
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['categoryAssignment', 'value'],
+                'relations' => ['categoryAssignments', 'values', 'photos'],
             ],
         ];
     }

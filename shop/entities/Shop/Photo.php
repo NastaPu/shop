@@ -2,7 +2,6 @@
 
 namespace shop\entities\Shop;
 
-use Yii;
 use yii\db\ActiveRecord;
 use yii\web\UploadedFile;
 
@@ -15,7 +14,7 @@ use yii\web\UploadedFile;
  * @property int $sort
  *
  */
-/*class Photo extends ActiveRecord
+class Photo extends ActiveRecord
 {
 
     public static function create(UploadedFile $file): self
