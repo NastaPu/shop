@@ -37,33 +37,7 @@ class Brand extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'shop_brand';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['name', 'slug', 'meta_json'], 'required'],
-            [['meta_json'], 'safe'],
-            [['name', 'slug'], 'string', 'max' => 255],
-            [['slug'], 'unique'],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'slug' => 'Slug',
-            'meta_json' => 'Meta Json',
-        ];
+        return '{{%shop_brand}}';
     }
 
     public function behaviors(): array

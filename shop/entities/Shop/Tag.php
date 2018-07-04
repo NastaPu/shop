@@ -33,30 +33,6 @@ class Tag extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'shop_tag';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['name', 'slug'], 'required'],
-            [['name', 'slug'], 'string', 'max' => 255],
-            [['slug'], 'unique'],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'slug' => 'Slug',
-        ];
+        return '{{%shop_tag}}';
     }
 }

@@ -28,6 +28,7 @@ use yii\web\UploadedFile;
  * @property CategoryAssignment[] $categoryAssignments
  * @property Value[] $values
  * @property Photo[] $photos
+ * @property TagAssignments[] $tagAssignments
  */
 class Product extends ActiveRecord
 {
@@ -75,18 +76,41 @@ class Product extends ActiveRecord
 
     //price
 
-    private function updatePhotos(array $photos): void
-    {
-        foreach ($photos as $i => $photo) {
-            $photo->setSort($i);
-        }
-        $this->photos = $photos;
-    }
-
     public function setPrice($new, $old): void
     {
         $this->price_new = $new;
         $this->price_old = $old;
+    }
+
+    //tag
+
+    public function assignTag($id): void
+    {
+        $assignments = $this->tagAssignments;
+        foreach ($assignments as $assignment) {
+            if ($assignment->isForTag($id)) {
+                return;
+            }
+        }
+        $assignments[] = TagAssignments::create($id);
+        $this->tagAssignments = $assignments;
+    }
+
+    public function revokeTag($id): void
+    {
+        $assignments = $this->tagAssignments;
+        foreach ($assignments as $i => $assignment) {
+            if ($assignment->isForTag($id)) {
+                unset($assignments[$i]);
+                $this->tagAssignments = $assignments;
+                return;
+            }
+        }
+        throw new \DomainException('Assignment is not found.');
+    }
+    public function revokeTags(): void
+    {
+        $this->tagAssignments = [];
     }
 
     //category
@@ -127,6 +151,14 @@ class Product extends ActiveRecord
     }
 
     //photo
+
+    private function updatePhotos(array $photos): void
+    {
+        foreach ($photos as $i => $photo) {
+            $photo->setSort($i);
+        }
+        $this->photos = $photos;
+    }
 
     public function addPhoto(UploadedFile $file): void
     {
@@ -187,7 +219,7 @@ class Product extends ActiveRecord
 
     public static function tableName() :string
     {
-        return 'shop_product';
+        return '{{%shop_product}}';
     }
 
     public function getBrand(): ActiveQuery
@@ -215,13 +247,18 @@ class Product extends ActiveRecord
         return $this->hasMany(Photo::class, ['product_id' => 'id'])->orderBy('sort');
     }
 
+    public function getTagAssignments(): ActiveQuery
+    {
+       return $this->hasMany(TagAssignments::class, ['product_id' => 'id']);
+    }
+
     public function behaviors(): array
     {
         return [
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['categoryAssignments', 'values', 'photos'],
+                'relations' => ['categoryAssignments', 'values', 'photos', 'tagAssignments'],
             ],
         ];
     }

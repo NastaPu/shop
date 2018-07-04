@@ -37,6 +37,6 @@ class Value extends ActiveRecord
 
     public static function tableName(): string
     {
-        return 'shop_values';
+        return '{{%shop_value}}';
     }
 }

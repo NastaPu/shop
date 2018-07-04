@@ -36,6 +36,6 @@ class Photo extends ActiveRecord
 
     public static function tableName():string
     {
-        return 'shop_photo';
+        return '{{%shop_photo}}';
     }
 }

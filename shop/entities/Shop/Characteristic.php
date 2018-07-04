@@ -68,7 +68,7 @@ class Characteristic extends ActiveRecord
 
     public static function tableName()
     {
-        return 'shop_characteristic';
+        return '{{%shop_characteristic}}';
     }
 
     public function afterFind(): void

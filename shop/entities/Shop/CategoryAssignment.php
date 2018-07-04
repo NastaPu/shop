@@ -29,7 +29,7 @@ class CategoryAssignment extends ActiveRecord
 
     public static function tableName():string
     {
-        return 'shop_category_assignment';
+        return '{{%shop_category_assignment}}';
     }
 
     /**

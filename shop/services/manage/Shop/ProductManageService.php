@@ -4,27 +4,36 @@ namespace shop\services\manage\Shop;
 
 use shop\entities\Shop\Meta;
 use shop\entities\Shop\Product;
+use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\CategoriesForm;
 use shop\forms\manage\Shop\Product\PhotoForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\repositories\BrandRepository;
 use shop\repositories\CategoryRepository;
 use shop\repositories\Shop\ProductRepository;
+use shop\repositories\TagRepository;
+use shop\services\manage\TransactionManager;
 
 class ProductManageService
 {
     private $products;
     private $brands;
     private $categories;
+    private $tags;
+    private $transaction;
 
     public function __construct(
         ProductRepository $products,
         BrandRepository $brands,
-        CategoryRepository $categories
+        CategoryRepository $categories,
+        TagRepository $tags,
+        TransactionManager $transaction
     ) {
         $this->products = $products;
         $this->brands = $brands;
         $this->categories = $categories;
+        $this->tags = $tags;
+        $this->transaction = $transaction;
     }
 
     public function create(ProductCreateForm $form): Product
@@ -57,9 +66,27 @@ class ProductManageService
             $product->addPhoto($file);
         }
 
-        $this->products->save($product);
+        foreach ($form->tags->existing as $tagId) {
+            $tag = $this->tags->get($tagId);
+            $product->assignTag($tag->id);
+        }
+
+        $this->transaction->wrap(function () use ($product, $form) {
+            foreach ($form->tags->textNew as $tagName) {
+                if (!$tag = $this->tags->findByName($tagName)) {
+                    $tag = Tag::create($tagName, $tagName);
+                    $this->tags->save($tag);
+                }
+                $product->assignTag($tag->id);
+            }
+            $this->products->save($product);
+        });
         return $product;
     }
+
+    //tag
+
+
 
     //category
 
