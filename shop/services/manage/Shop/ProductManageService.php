@@ -8,6 +8,7 @@ use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\CategoriesForm;
 use shop\forms\manage\Shop\Product\PhotoForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
+use shop\forms\manage\Shop\Product\ProductEditForm;
 use shop\repositories\BrandRepository;
 use shop\repositories\CategoryRepository;
 use shop\repositories\Shop\ProductRepository;
@@ -84,6 +85,44 @@ class ProductManageService
         return $product;
     }
 
+    public function edit($id, ProductEditForm $form): void
+    {
+        $product = $this->products->get($id);
+        $brand = $this->brands->get($form->brandId);
+        $product->edit(
+            $brand->id,
+            $form->code,
+            $form->name,
+            new Meta(
+                $form->meta->title,
+                $form->meta->description,
+                $form->meta->keywords
+            )
+        );
+
+        foreach ($form->values as $value) {
+            $product->setValue($value->id, $value->value);
+        }
+
+        $product->revokeTags();
+
+        foreach ($form->tags->existing as $tagId) {
+            $tag = $this->tags->get($tagId);
+            $product->assignTag($tag->id);
+        }
+
+        $this->transaction->wrap(function () use ($product, $form) {
+            foreach ($form->tags->textNew as $tagName) {
+                if (!$tag = $this->tags->findByName($tagName)) {
+                    $tag = Tag::create($tagName, $tagName);
+                    $this->tags->save($tag);
+                }
+                $product->assignTag($tag->id);
+            }
+            $this->products->save($product);
+        });
+    }
+    
     //category
 
     public function changeCategories($id, CategoriesForm $form): void

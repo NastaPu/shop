@@ -47,6 +47,14 @@ class Product extends ActiveRecord
         return $product;
     }
 
+    public function edit($brandId, $code, $name, Meta $meta): void
+    {
+        $this->brand_id = $brandId;
+        $this->code = $code;
+        $this->name = $name;
+        $this->meta = $meta;
+    }
+
     //value
 
     public function setValue($id, $value):void
