@@ -6,6 +6,7 @@ use shop\entities\Shop\Meta;
 use shop\entities\Shop\Product;
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\CategoriesForm;
+use shop\forms\manage\Shop\Product\ModificationForm;
 use shop\forms\manage\Shop\Product\PhotoForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
@@ -122,7 +123,7 @@ class ProductManageService
             $this->products->save($product);
         });
     }
-    
+
     //category
 
     public function changeCategories($id, CategoriesForm $form): void
@@ -183,6 +184,40 @@ class ProductManageService
         $product->revokeRelatedProduct($other->id);
         $this->products->save($product);
     }
+
+    //modification
+
+    public function addModification($id, ModificationForm $form): void
+    {
+        $product = $this->products->get($id);
+        $product->addModification(
+            $form->code,
+            $form->name,
+            $form->price
+        );
+        $this->products->save($product);
+    }
+
+    public function editModification($id, $modificationId, ModificationForm $form): void
+    {
+        $product = $this->products->get($id);
+        $product->editModification(
+            $modificationId,
+            $form->code,
+            $form->name,
+            $form->price
+        );
+        $this->products->save($product);
+    }
+
+    public function removeModification($id, $modificationId): void
+    {
+        $product = $this->products->get($id);
+        $product->removeModification($modificationId);
+        $this->products->save($product);
+    }
+    
+    //remove product
 
     public function remove($id): void
     {

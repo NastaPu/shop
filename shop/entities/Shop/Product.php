@@ -30,6 +30,7 @@ use yii\web\UploadedFile;
  * @property Photo[] $photos
  * @property TagAssignments[] $tagAssignments
  * @property RelatedAssignments[] $relatedAssignments
+ * @property Modification[] $modifications
  */
 class Product extends ActiveRecord
 {
@@ -258,6 +259,57 @@ class Product extends ActiveRecord
         $this->relatedAssignments = [];
     }
 
+    //modification
+
+    public function getModification($id): Modification
+    {
+        foreach ($this->modifications as $modification) {
+            if ($modification->isIdEqualTo($id)) {
+                return $modification;
+            }
+        }
+        throw new \DomainException('Modification is not found');
+    }
+
+    public function addModification($code, $name, $price): void
+    {
+        $modifications = $this->modifications;
+        foreach ($modifications as $modification) {
+            if ($modification->isCodeEqualTo($code)) {
+                throw new \DomainException('Modification already exists');
+            }
+        }
+        $modifications[] = Modification::create($code, $name, $price);
+        $this->modifications = $modifications;
+    }
+
+    public function editModification($id, $code, $name, $price): void
+    {
+        $modifications = $this->modifications;
+        foreach ($modifications as $i => $modification) {
+            if ($modification->isIdEqualTo($id)) {
+                $modification->edit($code, $name, $price);
+                $this->modifications = $modifications;
+                return;
+            }
+        }
+        throw new \DomainException('Modification is not found');
+    }
+
+    public function removeModification($id): void
+    {
+        $modifications = $this->modifications;
+        foreach ($modifications as $i => $modification) {
+            if ($modification->isIdEqualTo($id)) {
+                unset($modifications[$i]);
+                $this->modifications = $modifications;
+                return;
+            }
+        }
+        throw new \DomainException('Modification is not found');
+    }
+
+
     public static function tableName() :string
     {
         return '{{%shop_product}}';
@@ -298,13 +350,18 @@ class Product extends ActiveRecord
         return $this->hasMany(RelatedAssignments::class, ['product_id' => 'id']);
     }
 
+    public function getModifications(): ActiveQuery
+    {
+        return $this->hasMany(Modification::class, ['product_id' => 'id']);
+    }
+
     public function behaviors(): array
     {
         return [
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['categoryAssignments', 'values', 'photos', 'tagAssignments', 'relatedAssignments'],
+                'relations' => ['categoryAssignments', 'values', 'photos', 'tagAssignments', 'relatedAssignments', 'modifications'],
             ],
         ];
     }
