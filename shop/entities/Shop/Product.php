@@ -29,6 +29,7 @@ use yii\web\UploadedFile;
  * @property Value[] $values
  * @property Photo[] $photos
  * @property TagAssignments[] $tagAssignments
+ * @property RelatedAssignments[] $relatedAssignments
  */
 class Product extends ActiveRecord
 {
@@ -217,6 +218,38 @@ class Product extends ActiveRecord
         throw new \DomainException('Photo is not found');
     }
 
+    //related product
+
+    public function assignRelatedProduct($id): void
+    {
+        $assignments = $this->relatedAssignments;
+        foreach ($assignments as $assignment) {
+            if ($assignment->isForProduct($id)) {
+                return;
+            }
+        }
+        $assignments[] = RelatedAssignments::create($id);
+        $this->relatedAssignments = $assignments;
+    }
+
+    public function revokeRelatedProduct($id): void
+    {
+        $assignments = $this->relatedAssignments;
+        foreach ($assignments as $i => $assignment) {
+            if ($assignment->isForProduct($id)) {
+                unset($assignments[$i]);
+                $this->relatedAssignments = $assignments;
+                return;
+            }
+        }
+        throw new \DomainException('Assignment is not found.');
+    }
+
+    public function revokeRelatedProducts(): void
+    {
+        $this->relatedAssignments = [];
+    }
+
     public static function tableName() :string
     {
         return '{{%shop_product}}';
@@ -252,13 +285,18 @@ class Product extends ActiveRecord
        return $this->hasMany(TagAssignments::class, ['product_id' => 'id']);
     }
 
+    public function getRelatedAssignments(): ActiveQuery
+    {
+        return $this->hasMany(RelatedAssignments::class, ['product_id' => 'id']);
+    }
+
     public function behaviors(): array
     {
         return [
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['categoryAssignments', 'values', 'photos', 'tagAssignments'],
+                'relations' => ['categoryAssignments', 'values', 'photos', 'tagAssignments', 'relatedAssignments'],
             ],
         ];
     }

@@ -84,10 +84,6 @@ class ProductManageService
         return $product;
     }
 
-    //tag
-
-
-
     //category
 
     public function changeCategories($id, CategoriesForm $form): void
@@ -129,6 +125,23 @@ class ProductManageService
     {
         $product = $this->products->get($id);
         $product->removePhoto($photoId);
+        $this->products->save($product);
+    }
+
+    //related product
+
+    public function addRelatedProduct($id, $otherId): void
+    {
+        $product = $this->products->get($id);
+        $other = $this->products->get($otherId);
+        $product->assignRelatedProduct($other->id);
+        $this->products->save($product);
+    }
+    public function removeRelatedProduct($id, $otherId): void
+    {
+        $product = $this->products->get($id);
+        $other = $this->products->get($otherId);
+        $product->revokeRelatedProduct($other->id);
         $this->products->save($product);
     }
 
