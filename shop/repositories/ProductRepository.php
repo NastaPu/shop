@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\repositories\Shop;
+namespace shop\repositories;
 
 use shop\entities\Shop\Product;
 
