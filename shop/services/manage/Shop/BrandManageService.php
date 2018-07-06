@@ -6,13 +6,16 @@ use shop\entities\Shop\Meta;
 use shop\entities\Shop\Brand;
 use shop\forms\manage\Shop\BrandForm;
 use shop\repositories\BrandRepository;
+use shop\repositories\ProductRepository;
 
 class BrandManageService
 {
     private $brands;
-    public function __construct(BrandRepository $brands)
+    private $product;
+    public function __construct(BrandRepository $brands,ProductRepository $product)
     {
         $this->brands = $brands;
+        $this->product = $product;
     }
     public function create(BrandForm $form): Brand
     {
@@ -45,6 +48,9 @@ class BrandManageService
     public function remove($id): void
     {
         $brand = $this->brands->get($id);
+        if($this->product->existsByBrand($id)) {
+            throw new \DomainException('Can not be deleted a brand with products');
+        }
         $this->brands->remove($brand);
     }
 }

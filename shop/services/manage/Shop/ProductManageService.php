@@ -10,9 +10,10 @@ use shop\forms\manage\Shop\Product\ModificationForm;
 use shop\forms\manage\Shop\Product\PhotoForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
+use shop\forms\manage\Shop\MetaForm;
 use shop\repositories\BrandRepository;
 use shop\repositories\CategoryRepository;
-use shop\repositories\Shop\ProductRepository;
+use shop\repositories\ProductRepository;
 use shop\repositories\TagRepository;
 use shop\services\manage\TransactionManager;
 
@@ -42,6 +43,7 @@ class ProductManageService
     {
         $brand = $this->brands->get($form->brandId);
         $category = $this->categories->get($form->categories->main);
+
         $product = Product::create(
             $brand->id,
             $category->id,

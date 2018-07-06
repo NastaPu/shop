@@ -27,4 +27,9 @@ class ProductRepository
             throw new \RuntimeException('Removing error');
         }
     }
+
+    public function existsByBrand($id): bool
+    {
+        return Product::find()->andWhere(['brand_id' => $id])->exists();
+    }
 }

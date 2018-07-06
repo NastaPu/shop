@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model shop\entities\Shop\Brand */
+/* @var $model shop\forms\manage\Shop\BrandForm */
 /* @var $brand shop\entities\Shop\Brand */
 
 $this->title = 'Update Brand: ' . $brand->name;

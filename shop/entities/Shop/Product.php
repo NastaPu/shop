@@ -44,8 +44,8 @@ class Product extends ActiveRecord
         $product->category_id = $categoryId;
         $product->code = $code;
         $product->name = $name;
-        $product->meta = $meta;
         $product->created_at = time();
+        $product->meta = $meta;
         return $product;
     }
 
