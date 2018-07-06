@@ -4,7 +4,7 @@ namespace shop\forms\manage\Shop;
 
 use shop\entities\Shop\Brand;
 use shop\forms\CompositeForm;
-use shop\forms\manage\MetaForm;
+use shop\forms\manage\Shop\MetaForm;
 use yii\base\Model;
 use shop\validators\SlugValidate;
 

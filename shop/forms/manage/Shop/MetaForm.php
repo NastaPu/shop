@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\forms\manage;
+namespace shop\forms\manage\Shop;
 
 use shop\entities\Shop\Meta;
 use yii\base\Model;

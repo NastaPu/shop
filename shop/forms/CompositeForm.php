@@ -30,7 +30,7 @@ abstract class CompositeForm extends Model
 
     public function validate($attributeNames = null, $clearErrors = true): bool
     {
-        $parentNames = array_filter($attributeNames, 'is_string');
+        $parentNames = array_filter((array)$attributeNames, 'is_string');
         $success = parent::validate($parentNames, $clearErrors);
         foreach ($this->forms as $name => $form) {
             if (is_array($form)) {
