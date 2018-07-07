@@ -19,7 +19,7 @@ if (Yii::$app->controller->action->id === 'login') {
     if (class_exists('backend\assets\AppAsset')) {
         backend\assets\AppAsset::register($this);
     } else {
-        app\assets\AppAsset::register($this);
+        //app\assets\AppAsset::register($this);
     }
 
     dmstr\web\AdminLteAsset::register($this);
@@ -51,6 +51,7 @@ if (Yii::$app->controller->action->id === 'login') {
         )
         ?>
 
+        <img src="<?= Yii::getAlias('@static/upload/1.jpg')?>"/>
         <?= $this->render(
             'content.php',
             ['content' => $content, 'directoryAsset' => $directoryAsset]
