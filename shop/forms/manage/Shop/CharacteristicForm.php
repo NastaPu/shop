@@ -3,6 +3,7 @@
 namespace shop\forms\manage\Shop;
 
 use shop\entities\Shop\Characteristic;
+use shop\helpers\CharacteristicHelper;
 use yii\base\Model;
 
 /**
@@ -50,5 +51,10 @@ class CharacteristicForm extends Model
     public function getVariants(): array
     {
         return preg_split('#[\r\n]\s+#i', $this->textVariants);
+    }
+
+    public function typesList(): array
+    {
+        return CharacteristicHelper::typeList();
     }
 }

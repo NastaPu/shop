@@ -2,7 +2,6 @@
 
 namespace backend\forms\shop;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use shop\entities\Shop\Tag;
@@ -10,8 +9,11 @@ use shop\entities\Shop\Tag;
 /**
  * TagSearch represents the model behind the search form of `shop\entities\Shop\Tag`.
  */
-class TagSearch extends Tag
+class TagSearch extends Model
 {
+    public $id;
+    public $name;
+    public $slug;
     /**
      * {@inheritdoc}
      */
