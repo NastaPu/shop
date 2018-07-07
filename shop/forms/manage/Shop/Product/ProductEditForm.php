@@ -5,7 +5,7 @@ namespace shop\forms\manage\Shop\Product;
 use shop\entities\Shop\Characteristic;
 use shop\entities\Shop\Product;
 use shop\forms\CompositeForm;
-use shop\forms\manage\MetaForm;
+use shop\forms\manage\Shop\MetaForm;
 
 /**
  * @property MetaForm $meta
@@ -18,6 +18,7 @@ class ProductEditForm extends CompositeForm
     public $brandId;
     public $code;
     public $name;
+    public $description;
 
     private $_product;
 
@@ -26,6 +27,7 @@ class ProductEditForm extends CompositeForm
         $this->brandId = $product->brand_id;
         $this->code = $product->code;
         $this->name = $product->name;
+        $this->description = $product->description;
         $this->meta = new MetaForm($product->meta);
         $this->tags = new TagsForm($product);
         $this->values = array_map(function (Characteristic $characteristic) use ($product) {
