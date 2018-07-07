@@ -32,4 +32,9 @@ class ProductRepository
     {
         return Product::find()->andWhere(['brand_id' => $id])->exists();
     }
+
+    public function existsByCategory($id): bool
+    {
+        return Product::find()->andWhere(['category_id' => $id])->exists();
+    }
 }

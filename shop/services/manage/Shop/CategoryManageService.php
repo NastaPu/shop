@@ -6,14 +6,17 @@ use shop\entities\Shop\Meta;
 use shop\entities\Shop\Category;
 use shop\forms\manage\Shop\CategoryForm;
 use shop\repositories\CategoryRepository;
+use shop\repositories\ProductRepository;
 
 class CategoryManageService
 {
     private $categories;
+    private $product;
 
-    public function __construct(CategoryRepository $categories)
+    public function __construct(CategoryRepository $categories, ProductRepository $product)
     {
         $this->categories = $categories;
+        $this->product = $product;
     }
     public function create(CategoryForm $form): Category
     {
@@ -53,11 +56,36 @@ class CategoryManageService
             $category->appendTo($parent);
         }
         $this->categories->save($category);
+
     }
+
+    public function moveUp($id):void
+    {
+        $category = $this->categories->get($id);
+        $this->assertIsNotRoot($category);
+        if($prev = $category->prev) {
+            $category->insertBefore($prev);
+        }
+        $this->categories->save($category);
+    }
+
+    public function moveDown($id):void
+    {
+        $category = $this->categories->get($id);
+        $this->assertIsNotRoot($category);
+        if($next = $category->next) {
+            $category->insertAfter($next);
+        }
+        $this->categories->save($category);
+    }
+
     public function remove($id): void
     {
         $category = $this->categories->get($id);
         $this->assertIsNotRoot($category);
+        if($this->product->existsByCategory($id)) {
+            throw new \DomainException('Can not be deleted a category with products');
+        }
         $this->categories->remove($category);
     }
     private function assertIsNotRoot(Category $category): void

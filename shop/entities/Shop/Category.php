@@ -21,6 +21,8 @@ use yii\db\ActiveRecord;
  * @property int $depth
  * @property Meta $meta
  * @property Category $parent
+ * @property Category $prev
+ * @property Category $next
  * @mixin NestedSetsBehavior
  */
 class Category extends ActiveRecord
