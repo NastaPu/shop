@@ -34,6 +34,8 @@ use yii\web\UploadedFile;
  * @property Modification[] $modifications
  * @property Review[] $reviews
  * @property integer $main_photo_id
+ * @property Category[] $categories
+ * @property Tag[] $tags
  */
 class Product extends ActiveRecord
 {
@@ -439,6 +441,16 @@ class Product extends ActiveRecord
         return $this->hasOne(Photo::class, ['id' => 'main_photo_id']);
     }
 
+    public function getCategories(): ActiveQuery
+    {
+        return $this->hasMany(Category::class, ['id' => 'category_id'])->via('categoryAssignments');
+    }
+
+    public function getTags(): ActiveQuery
+    {
+        return $this->hasMany(Tag::class, ['id' => 'tag_id'])->via('tagAssignments');
+    }
+
     public function behaviors(): array
     {
         return [
@@ -460,9 +472,9 @@ class Product extends ActiveRecord
     public function afterSave($insert, $changedAttributes): void
     {
         $related = $this->getRelatedRecords();
+        parent::afterSave($insert, $changedAttributes);
         if (array_key_exists('mainPhoto', $related)) {
             $this->updateAttributes(['main_photo_id' => $related['mainPhoto'] ? $related['mainPhoto']->id : null]);
         }
-        parent::afterSave($insert, $changedAttributes);
     }
 }

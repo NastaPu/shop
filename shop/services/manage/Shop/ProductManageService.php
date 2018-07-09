@@ -2,11 +2,13 @@
 
 namespace shop\services\manage\Shop;
 
+use shop\entities\Shop\Category;
 use shop\entities\Shop\Meta;
 use shop\entities\Shop\Product;
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\ModificationForm;
 use shop\forms\manage\Shop\Product\PhotoForm;
+use shop\forms\manage\Shop\Product\PriceForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
 use shop\repositories\BrandRepository;
@@ -73,9 +75,8 @@ class ProductManageService
             $tag = $this->tags->get($tagId);
             $product->assignTag($tag->id);
         }
-
         $this->transaction->wrap(function () use ($product, $form) {
-            foreach ($form->tags->textNew as $tagName) {
+            foreach ($form->tags->newNames as $tagName) {
                 if (!$tag = $this->tags->findByName($tagName)) {
                     $tag = Tag::create($tagName, $tagName);
                     $this->tags->save($tag);
@@ -84,6 +85,7 @@ class ProductManageService
             }
             $this->products->save($product);
         });
+
         return $product;
     }
 
@@ -105,25 +107,26 @@ class ProductManageService
         );
 
         $product->changeMainCategory($category->id);
-        $product->revokeCategories();
-        foreach ($form->categories->others as $otherId) {
-            $category = $this->categories->get($otherId);
-            $product->assignCategory($category->id);
-        }
 
-        foreach ($form->values as $value) {
-            $product->setValue($value->id, $value->value);
-        }
+        $this->transaction->wrap(function () use ($product, $form, $category) {
+            $this->assertIsNotRoot($category);
+            $product->revokeCategories();
+            $product->revokeTags();
 
-        $product->revokeTags();
+            $this->products->save($product);
 
-        foreach ($form->tags->existing as $tagId) {
-            $tag = $this->tags->get($tagId);
-            $product->assignTag($tag->id);
-        }
-
-        $this->transaction->wrap(function () use ($product, $form) {
-            foreach ($form->tags->textNew as $tagName) {
+            foreach ($form->categories->others as $otherId) {
+                $category = $this->categories->get($otherId);
+                $product->assignCategory($category->id);
+            }
+            foreach ($form->values as $value) {
+                $product->setValue($value->id, $value->value);
+            }
+            foreach ($form->tags->existing as $tagId) {
+                $tag = $this->tags->get($tagId);
+                $product->assignTag($tag->id);
+            }
+            foreach ($form->tags->newNames as $tagName) {
                 if (!$tag = $this->tags->findByName($tagName)) {
                     $tag = Tag::create($tagName, $tagName);
                     $this->tags->save($tag);
@@ -135,6 +138,22 @@ class ProductManageService
     }
 
     //category
+
+    private function assertIsNotRoot(Category $category): void
+    {
+        if ($category->isRoot()) {
+            throw new \DomainException('Unable to manage the root category');
+        }
+    }
+
+    //price
+
+    public function changePrice($id, PriceForm $form): void
+    {
+        $product = $this->products->get($id);
+        $product->setPrice($form->new, $form->old);
+        $this->products->save($product);
+    }
 
     //photo
 
@@ -221,4 +240,5 @@ class ProductManageService
         $product = $this->products->get($id);
         $this->products->remove($product);
     }
+
 }

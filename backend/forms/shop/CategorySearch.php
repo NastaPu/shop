@@ -12,6 +12,9 @@ use shop\entities\Shop\Category;
 class CategorySearch extends Model
 {
     public $id;
+    public $lft;
+    public $rgt;
+    public $depth;
     public $name;
     public $slug;
     public $title;
@@ -23,7 +26,7 @@ class CategorySearch extends Model
     {
         return [
             [['id', 'lft', 'rgt', 'depth'], 'integer'],
-            [['name', 'slug', 'title', 'description', 'meta_json'], 'safe'],
+            [['name', 'slug', 'title', 'description'], 'safe'],
         ];
     }
 
