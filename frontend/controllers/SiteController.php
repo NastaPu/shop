@@ -86,11 +86,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'home';
         return $this->render('index');
     }
 
     public function actionLogin()
     {
+        $this->layout = 'cabinet';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -113,6 +115,7 @@ class SiteController extends Controller
 
     public function actionLogout()
     {
+        $this->layout = 'cabinet';
         Yii::$app->user->logout();
 
         return $this->goHome();
@@ -145,6 +148,7 @@ class SiteController extends Controller
 
     public function actionSignup()
     {
+        $this->layout = 'cabinet';
         $form = new SignupForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
@@ -178,6 +182,7 @@ class SiteController extends Controller
 
     public function actionRequestPasswordReset()
     {
+        $this->layout = 'cabinet';
         $form = new PasswordResetRequestForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
@@ -197,8 +202,8 @@ class SiteController extends Controller
 
     public function actionResetPassword($token)
     {
-        //var_dump($token);
-       $service = new PasswordResetService();
+        $this->layout = 'cabinet';
+        $service = new PasswordResetService();
         try {
             $service->validateToken($token);
         } catch(\DomainException $e) {
