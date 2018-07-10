@@ -146,6 +146,22 @@ class ProductManageService
         }
     }
 
+    //status
+
+    public function active($id)
+    {
+        $product = $this->products->get($id);
+        $product->activate();
+        $this->products->save($product);
+    }
+
+    public function draft($id)
+    {
+        $product = $this->products->get($id);
+        $product->draft();
+        $this->products->save($product);
+    }
+
     //price
 
     public function changePrice($id, PriceForm $form): void

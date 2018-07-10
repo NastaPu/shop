@@ -3,6 +3,7 @@
 namespace shop\entities\Shop;
 
 use shop\entities\behavior\MetaBehavior;
+use shop\entities\Shop\queries\ProductQuery;
 use yii\db\ActiveRecord;
 use yii\db\ActiveQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
@@ -22,6 +23,7 @@ use yii\web\UploadedFile;
  * @property string $rating
  * @property string $meta_json
  * @property string $description
+ * @property int $status
  *
  * @property Meta $meta
  * @property Brand $brand
@@ -39,6 +41,9 @@ use yii\web\UploadedFile;
  */
 class Product extends ActiveRecord
 {
+    const STATUS_DRAFT = 0;
+    const STATUS_ACTIVE = 1;
+
     public $meta;
 
     public static function create($brandId, $categoryId, $code, $name, $description, Meta $meta): self
@@ -48,6 +53,7 @@ class Product extends ActiveRecord
         $product->category_id = $categoryId;
         $product->code = $code;
         $product->name = $name;
+        $product->status = self::STATUS_DRAFT;
         $product->description = $description;
         $product->created_at = time();
         $product->meta = $meta;
@@ -97,6 +103,34 @@ class Product extends ActiveRecord
     {
         $this->price_new = $new;
         $this->price_old = $old;
+    }
+
+    //status
+
+    public function activate():void
+    {
+        if($this->isActive()) {
+            throw new \DomainException('This product already active');
+        }
+        $this->status = self::STATUS_ACTIVE;
+    }
+
+    public function draft():void
+    {
+        if($this->isDraft()) {
+            throw new \DomainException('This product already draft');
+        }
+        $this->status = self::STATUS_DRAFT;
+    }
+
+    public function isActive():bool
+    {
+        return $this->status == self::STATUS_ACTIVE;
+    }
+
+    public function isDraft():bool
+    {
+        return $this->status == self::STATUS_DRAFT;
     }
 
     //tag
@@ -476,5 +510,10 @@ class Product extends ActiveRecord
         if (array_key_exists('mainPhoto', $related)) {
             $this->updateAttributes(['main_photo_id' => $related['mainPhoto'] ? $related['mainPhoto']->id : null]);
         }
+    }
+
+    public static function find(): ProductQuery
+    {
+        return new ProductQuery(static::class);
     }
 }

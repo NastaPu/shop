@@ -1,5 +1,6 @@
 <?php
 
+use shop\helpers\ProductHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use shop\entities\Shop\Product;
@@ -43,6 +44,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'category_id',
                 'filter' => $searchModel->categoriesList(),
                 'value' => 'category.name',
+            ],
+            [
+                'attribute' => 'status',
+                'filter' => $searchModel->statusList(),
+                'value' => function (Product $model) {
+                    return ProductHelper::statusLabel($model->status);
+                    },
+                'format' => 'raw',
             ],
             'price_new',
         ],

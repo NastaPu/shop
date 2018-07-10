@@ -2,32 +2,33 @@
 
 namespace shop\helpers;
 
-use shop\entities\User\User;
+use shop\entities\Shop\Product;
+use shop\forms\manage\Shop\Product\ProductCreateForm;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
-class UserHelper
+class ProductHelper
 {
     public static function statusList():array
     {
         return[
-            User::STATUS_WAIT => 'Wait',
-            User::STATUS_ACTIVE => 'Active'
+            Product::STATUS_DRAFT => 'Draft',
+            Product::STATUS_ACTIVE => 'Active'
         ];
     }
 
-   /* public function statusName($status)
+    public function statusName($status)
     {
-        return ArrayHelper::getValue(self::statusList(), $status);
-    }*/
+         return ArrayHelper::getValue(self::statusList(), $status);
+    }
 
     public static function statusLabel($status)
     {
         switch($status){
-            case User::STATUS_ACTIVE:
+            case Product::STATUS_ACTIVE:
                 $class = 'label label-success';
                 break;
-            case User::STATUS_WAIT:
+            case Product::STATUS_DRAFT:
                 $class = 'label label-default';
                 break;
             default:
