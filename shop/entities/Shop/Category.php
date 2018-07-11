@@ -21,6 +21,7 @@ use yii\db\ActiveRecord;
  * @property int $depth
  * @property Meta $meta
  * @property Category $parent
+ * @property Category[] $parents
  * @property Category[] $children
  * @property Category $prev
  * @property Category $next

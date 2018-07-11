@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $product shop\entities\Shop\Product */
+/* @var $category shop\entities\Shop\Category */
 /* @var $cartForm shop\forms\shop\AddToCartForm */
 /* @var $reviewForm shop\forms\shop\ReviewForm */
 
@@ -16,7 +17,15 @@ $this->registerMetaTag(['name' =>'description', 'content' => $product->meta->des
 $this->registerMetaTag(['name' =>'keywords', 'content' => $product->meta->keywords]);
 
 $this->params['breadcrumbs'][] = ['label' => 'Catalog', 'url' => ['index']];
+foreach ($product->category->parents as $parent) {
+    if (!$parent->isRoot()) {
+        $this->params['breadcrumbs'][] = ['label' => $parent->name, 'url' => ['category', 'id' => $parent->id]];
+    }
+}
+$this->params['breadcrumbs'][] = ['label' => $product->category->name, 'url' => ['category', 'id' => $product->category->id]];
 $this->params['breadcrumbs'][] = $product->name;
+
+
 
 MagnificPopupAsset::register($this);
 ?>
@@ -27,13 +36,13 @@ MagnificPopupAsset::register($this);
             <?php foreach ($product->photos as $i => $photo): ?>
                 <?php if ($i == 0): ?>
                     <li>
-                        <a class="thumbnail" href="<?= $photo->getUploadedFileUrl('file') ?>">
+                        <a class="thumbnail" href="<?= $photo->getThumbFileUrl('file', 'catalog_origin') ?>">
                             <img src="<?= $photo->getThumbFileUrl('file', 'catalog_product_main') ?>" alt="<?= Html::encode($product->name) ?>" />
                         </a>
                     </li>
                 <?php else: ?>
                     <li class="image-additional">
-                        <a class="thumbnail" href="<?= $photo->getUploadedFileUrl('file') ?>" title="HP LP3065">
+                        <a class="thumbnail" href="<?= $photo->getThumbFileUrl('file', 'catalog_origin') ?>">
                             <img src="<?= $photo->getThumbFileUrl('file', 'catalog_product_additional') ?>" alt="" />
                         </a>
                     </li>
