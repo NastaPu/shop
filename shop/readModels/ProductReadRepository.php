@@ -18,6 +18,7 @@ class ProductReadRepository
         $query = Product::find()->alias('p')->active('p')->with('mainPhoto');
         return $this->getProvider($query);
     }
+
     public function getAllByCategory(Category $category): DataProviderInterface
     {
         $query = Product::find()->alias('p')->active('p')->with('mainPhoto', 'category');
@@ -27,12 +28,14 @@ class ProductReadRepository
         $query->groupBy('p.id');
         return $this->getProvider($query);
     }
+
     public function getAllByBrand(Brand $brand): DataProviderInterface
     {
         $query = Product::find()->alias('p')->active('p')->with('mainPhoto');
         $query->andWhere(['p.brand_id' => $brand->id]);
         return $this->getProvider($query);
     }
+
     public function getAllByTag(Tag $tag): DataProviderInterface
     {
         $query = Product::find()->alias('p')->active('p')->with('mainPhoto');
@@ -41,10 +44,17 @@ class ProductReadRepository
         $query->groupBy('p.id');
         return $this->getProvider($query);
     }
+
     public function find($id): ?Product
     {
         return Product::find()->active()->andWhere(['id' => $id])->one();
     }
+
+    public function getFeatured($limit):array
+    {
+        return Product::find()->with('mainPhoto')->orderBy(['id' => SORT_DESC])->limit($limit)->all();
+    }
+
     private function getProvider(ActiveQuery $query): ActiveDataProvider
     {
         return new ActiveDataProvider([
