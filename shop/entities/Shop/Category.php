@@ -21,6 +21,7 @@ use yii\db\ActiveRecord;
  * @property int $depth
  * @property Meta $meta
  * @property Category $parent
+ * @property Category[] $children
  * @property Category $prev
  * @property Category $next
  * @mixin NestedSetsBehavior
@@ -74,30 +75,13 @@ class Category extends ActiveRecord
         return new CategoryQuery(static::class);
     }
 
-   /* public function rules()
+    public function getSeoTitle(): string
     {
-        return [
-            [['name', 'slug', 'meta_json', 'lft', 'rgt', 'depth'], 'required'],
-            [['description'], 'string'],
-            [['meta_json'], 'safe'],
-            [['lft', 'rgt', 'depth'], 'integer'],
-            [['name', 'slug', 'title'], 'string', 'max' => 255],
-            [['slug'], 'unique'],
-        ];
+        return $this->meta->title ?: $this->getHeadingTile();
     }
 
-    public function attributeLabels()
+    public function getHeadingTile(): string
     {
-        return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'slug' => 'Slug',
-            'title' => 'Title',
-            'description' => 'Description',
-            'meta_json' => 'Meta Json',
-            'lft' => 'Lft',
-            'rgt' => 'Rgt',
-            'depth' => 'Depth',
-        ];
-    }*/
+        return $this->title ?: $this->name;
+    }
 }

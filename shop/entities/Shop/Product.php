@@ -38,6 +38,7 @@ use yii\web\UploadedFile;
  * @property integer $main_photo_id
  * @property Category[] $categories
  * @property Tag[] $tags
+ * @property Photo $mainPhoto
  */
 class Product extends ActiveRecord
 {

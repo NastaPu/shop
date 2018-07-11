@@ -32,10 +32,13 @@ class Brand extends ActiveRecord
         $this->slug = $slug;
         $this->meta = $meta;
     }
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
+
+    public function getSeoTitle(): string
+    {
+        return $this->meta->title ?: $this->name;
+    }
+
+    public static function tableName():string
     {
         return '{{%shop_brand}}';
     }
