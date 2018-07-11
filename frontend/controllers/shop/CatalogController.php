@@ -3,6 +3,7 @@
 namespace frontend\controllers\shop;
 
 use shop\forms\Shop\AddToCartForm;
+use shop\forms\Shop\ReviewForm;
 use shop\readModels\BrandReadRepository;
 use shop\readModels\CategoryReadRepository;
 use shop\readModels\ProductReadRepository;
@@ -88,11 +89,13 @@ class CatalogController extends Controller
             throw new NotFoundHttpException('The requested page does not exist');
         }
         $cartForm = new AddToCartForm($product);
+        $reviewForm = new ReviewForm();
         $this->layout = 'blank';
 
         return $this->render('product', [
             'product' => $product,
             'cartForm' => $cartForm,
+            'reviewForm' => $reviewForm,
         ]);
     }
 
