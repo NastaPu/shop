@@ -11,6 +11,8 @@ $this->registerMetaTag(['name' =>'description', 'content' => $category->meta->de
 $this->registerMetaTag(['name' =>'keywords', 'content' => $category->meta->keywords]);
 
 $this->params['breadcrumbs'][] = ['label' => 'Catalog', 'url' => ['index']];
+$this->params['active_category'] = $category;
+
 
 foreach ($category->parents as $parent) {
     if (!$parent->isRoot()) {
