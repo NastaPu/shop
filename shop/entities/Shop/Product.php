@@ -421,6 +421,13 @@ class Product extends ActiveRecord
         $this->rating = $amount ? $total / $amount : null;
     }
 
+    //meta
+
+    public function getSeoTitle(): string
+    {
+        return $this->meta->title ?: $this->name;
+    }
+
     public static function tableName() :string
     {
         return '{{%shop_product}}';
