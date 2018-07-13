@@ -2,8 +2,11 @@
 
 namespace common\bootstrap;
 
-use shop\services\contact\ContactService;
+use frontend\urls\CategoryUrlRule;
+use shop\readModels\CategoryReadRepository;
 use yii\base\BootstrapInterface;
+use yii\caching\Cache;
+use yii\di\Instance;
 use yii\mail\MailerInterface;
 
 class SetUp implements BootstrapInterface
@@ -18,5 +21,13 @@ class SetUp implements BootstrapInterface
        //     $app->params['adminEmail'],
        // ]);
 
+        $container->setSingleton('cache', function () use ($app) {
+            return $app->cache;
+        });
+
+        $container->set(CategoryUrlRule::class, [], [
+            Instance::of(CategoryReadRepository::class),
+            Instance::of('cache'),
+        ]);
     }
 }

@@ -106,12 +106,14 @@ OwlCarouselAsset::register($this);
                 </div>
             </div>
             <div class="col-sm-5">
+                <?= Html::beginForm(['/shop/catalog/search'], 'get') ?>
                 <div id="search" class="input-group">
-                    <input type="text" name="search" value="" placeholder="Search" class="form-control input-lg"/>
+                    <input type="text" name="text" value="" placeholder="Search" class="form-control input-lg"/>
                     <span class="input-group-btn">
-    <button type="button" class="btn btn-default btn-lg"><img src="http://static.sh.com/cache/manufacturers/zoom.png" alt="zoom"></button>
-  </span>
+                        <button type="submit" class="btn btn-default btn-lg"><img src="http://static.sh.com/cache/manufacturers/zoom.png" alt="zoom"></i></button>
+                    </span>
                 </div>
+                <?= Html::endForm() ?>
             </div>
             <div class="col-sm-3">
                 <div id="cart" class="btn-group btn-block">
@@ -122,40 +124,10 @@ OwlCarouselAsset::register($this);
                         <li>
                             <table class="table table-striped">
                                 <tr>
-                                    <td class="text-center"><a
-                                                href="/index.php?route=product/product&amp;product_id=30"><img
-                                                    src="http://static.sh.com/cache/products/canon_eos_5d_2-74x74.jpg"
-                                                    alt="Canon EOS 5D" title="Canon EOS 5D" class="img-thumbnail"/></a>
-                                    </td>
-                                    <td class="text-left"><a
-                                                href="/index.php?route=product/product&amp;product_id=30">Canon
-                                            EOS 5D</a>
-                                        <br/>
-                                        -
-                                        <small>Select Red</small>
-                                    </td>
-                                    <td class="text-right">x 2</td>
-                                    <td class="text-right">$196.00</td>
-                                    <td class="text-center">
-                                        <button type="button" onclick="cart.remove('2');" title="Remove"
-                                                class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
-                                    </td>
+
                                 </tr>
                                 <tr>
-                                    <td class="text-center"><a
-                                                href="/index.php?route=product/product&amp;product_id=40"><img
-                                                    src="http://static.sh.com/cache/products/iphone_1-200x200.jpg"
-                                                    alt="iPhone" title="iPhone" class="img-thumbnail"/></a>
-                                    </td>
-                                    <td class="text-left"><a
-                                                href="/index.php?route=product/product&amp;product_id=40">iPhone</a>
-                                    </td>
-                                    <td class="text-right">x 1</td>
-                                    <td class="text-right">$123.20</td>
-                                    <td class="text-center">
-                                        <button type="button" onclick="cart.remove('1');" title="Remove"
-                                                class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
-                                    </td>
+
                                 </tr>
                             </table>
                         </li>

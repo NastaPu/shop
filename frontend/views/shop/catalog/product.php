@@ -81,7 +81,7 @@ MagnificPopupAsset::register($this);
 
                     <div class="panel-panel-info">
                         <div class="panel-body">
-                            Please <?= Html::a('Log In', ['/auth/auth/login']) ?> for writing a review.
+                            Please <?= Html::a('Log In', ['/site/login']) ?> for writing a review.
                         </div>
                     </div>
 

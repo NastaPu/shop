@@ -6,6 +6,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
+
 <?php if ($category->children): ?>
     <div class="panel panel-default">
         <div class="panel-body">
