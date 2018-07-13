@@ -2,11 +2,9 @@
 
 namespace common\bootstrap;
 
-use frontend\urls\CategoryUrlRule;
-use shop\readModels\CategoryReadRepository;
+use Elasticsearch\Client;
+use Elasticsearch\ClientBuilder;
 use yii\base\BootstrapInterface;
-use yii\caching\Cache;
-use yii\di\Instance;
 use yii\mail\MailerInterface;
 
 class SetUp implements BootstrapInterface
@@ -25,9 +23,13 @@ class SetUp implements BootstrapInterface
             return $app->cache;
         });
 
-        $container->set(CategoryUrlRule::class, [], [
+       /* $container->set(CategoryUrlRule::class, [], [
             Instance::of(CategoryReadRepository::class),
             Instance::of('cache'),
-        ]);
+        ]);*/
+
+        $container->setSingleton(Client::class, function () {
+            return ClientBuilder::create()->build();
+       });
     }
 }
