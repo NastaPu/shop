@@ -104,7 +104,7 @@ MagnificPopupAsset::register($this);
     </div>
     <div class="col-sm-4">
         <p class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="Add to Wish List" onclick="wishlist.add('47');"><img src="http://static.sh.com/cache/manufacturers/Wish.png"></button>
+            <button type="button" data-toggle="tooltip" class="btn btn-default" title="Add to Wish List" href="<?= Url::to(['/cabinet/wishlist/add', 'id' => $product->id]) ?>" data-method="post"><img src="http://static.sh.com/cache/manufacturers/Wish.png"></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="Compare this Product" onclick="compare.add('47');"><img src="http://static.sh.com/cache/manufacturers/Compare.png"></button>
         </p>
         <h1><?= Html::encode($product->name) ?></h1>

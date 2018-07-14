@@ -14,11 +14,9 @@ use yii\helpers\Url;
         </div>
         <aside id="column-right" class="col-sm-3 hidden-xs">
             <div class="list-group">
-                <a href="<?= Html::encode(Url::to(['/site/login'])) ?>" class="list-group-item">Login</a>
-                <a href="<?= Html::encode(Url::to(['/site/signup'])) ?>" class="list-group-item">Signup</a>
                 <a href="<?= Html::encode(Url::to(['/site/request-password-reset'])) ?>" class="list-group-item">Forgotten Password</a>
-                <a href="/account/account" class="list-group-item">My Account</a>
-                <a href="/account/wishlist" class="list-group-item">Wish List</a>
+                <a href=<?= Html::encode(Url::to(['/cabinet/default/index'])) ?> class="list-group-item">My Account</a>
+                <a href=<?= Html::encode(Url::to(['/cabinet/wishlist/index'])) ?> class="list-group-item">Wish List</a>
                 <a href="/account/order" class="list-group-item">Order History</a>
                 <a href="/account/newsletter" class="list-group-item">Newsletter</a>
             </div>

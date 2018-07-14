@@ -23,6 +23,7 @@ use yii\web\IdentityInterface;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
+ * @property WishList[] $wishList
  *
  * * @property Network[] $networks
  */
@@ -108,6 +109,33 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
+    //wishlist
+
+    public function addToWishList($productId): void
+    {
+        $items = $this->wishList;
+        foreach ($items as $item) {
+            if ($item->isForProduct($productId)) {
+                throw new \DomainException('Item is already added');
+            }
+        }
+        $items[] = WishList::create($productId);
+        $this->wishList = $items;
+    }
+
+    public function removeFromWishList($productId): void
+    {
+        $items = $this->wishList;
+        foreach ($items as $i => $item) {
+            if ($item->isForProduct($productId)) {
+                unset($items[$i]);
+                $this->wishList = $items;
+                return;
+            }
+        }
+        throw new \DomainException('Item is not found');
+    }
+
     public function isActive(): bool
     {
         return $this->status === self::STATUS_ACTIVE;
@@ -118,10 +146,14 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->status === self::STATUS_WAIT;
     }
 
-
     public function getNetworks(): ActiveQuery
     {
         return $this->hasMany(Network::className(), ['user_id' => 'id']);
+    }
+
+    public function getWishList(): ActiveQuery
+    {
+        return $this->hasMany(WishList::className(), ['user_id' => 'id']);
     }
 
     public static function tableName()
@@ -135,7 +167,7 @@ class User extends ActiveRecord implements IdentityInterface
             TimestampBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['networks'],
+                'relations' => ['networks', 'wishList'],
             ]
         ];
     }

@@ -4,6 +4,7 @@ namespace shop\entities\Shop;
 
 use shop\entities\behavior\MetaBehavior;
 use shop\entities\Shop\queries\ProductQuery;
+use shop\entities\User\WishList;
 use yii\db\ActiveRecord;
 use yii\db\ActiveQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
@@ -491,6 +492,11 @@ class Product extends ActiveRecord
     public function getTags(): ActiveQuery
     {
         return $this->hasMany(Tag::class, ['id' => 'tag_id'])->via('tagAssignments');
+    }
+
+    public function getWishList(): ActiveQuery
+    {
+        return $this->hasMany(WishList::className(), ['product_id' => 'id']);
     }
 
     public function behaviors(): array
