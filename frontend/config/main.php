@@ -13,7 +13,10 @@ return [
         '@staticRoot' => $params['staticPath'],
         '@static' => $params['staticHostInfo']
     ],
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'common\bootstrap\SetUp'
+    ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [

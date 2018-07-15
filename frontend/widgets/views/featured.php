@@ -34,7 +34,7 @@ use yii\helpers\Url;
                             </p>
                         </div>
                         <div class="button-group">
-                            <button type="button" onclick="cart.add('<?= $product->id ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Add to Cart</span></button>
+                            <button type="button"  href="<?= Url::to(['/shop/cart/add', 'id' => $product->id]) ?>" data-method="post"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Add to Cart</span></button>
                             <button type="button" data-toggle="tooltip" title="Add to Wish List" href="<?= Url::to(['/cabinet/wishlist/add', 'id' => $product->id]) ?>" data-method="post"><img src="http://static.sh.com/cache/manufacturers/Wish.png"></button>
                             <button type="button" data-toggle="tooltip" title="Compare this Product" onclick="compare.add('<?= $product->id ?>');"><img src="http://static.sh.com/cache/manufacturers/Compare.png"></button>
                         </div>
