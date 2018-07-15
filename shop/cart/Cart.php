@@ -89,7 +89,7 @@ class Cart
         return $this->items;
     }
 
-    public function getAmount():array
+    public function getAmount():int
     {
         $this->loadItems();
         return count($this->items);

@@ -5,6 +5,7 @@
 
 use frontend\assets\AppAsset;
 use frontend\assets\OwlCarouselAsset;
+use frontend\widgets\CartWidget;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Html;
@@ -117,50 +118,8 @@ OwlCarouselAsset::register($this);
                 <?= Html::endForm() ?>
             </div>
             <div class="col-sm-3">
-                <div id="cart" class="btn-group btn-block">
-                    <button type="button" data-toggle="dropdown" data-loading-text="Loading..."
-                            class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i>
-                        <span id="cart-total">3 item(s) - $319.20</span></button>
-                    <ul class="dropdown-menu pull-right">
-                        <li>
-                            <table class="table table-striped">
-                                <tr>
-
-                                </tr>
-                                <tr>
-
-                                </tr>
-                            </table>
-                        </li>
-                        <li>
-                            <div>
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <td class="text-right"><strong>Sub-Total</strong></td>
-                                        <td class="text-right">$261.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
-                                        <td class="text-right">$6.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-right"><strong>VAT (20%)</strong></td>
-                                        <td class="text-right">$52.20</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-right"><strong>Total</strong></td>
-                                        <td class="text-right">$319.20</td>
-                                    </tr>
-                                </table>
-                                <p class="text-right"><a
-                                            href="/index.php?route=checkout/cart"><strong><i
-                                                    class="fa fa-shopping-cart"></i> View Cart</strong></a>&nbsp;&nbsp;&nbsp;<a
-                                            href="/index.php?route=checkout/checkout"><strong><i
-                                                    class="fa fa-share"></i> Checkout</strong></a></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <?= CartWidget::widget() ?>
+            </div>
             </div>
         </div>
     </div>
