@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = 'Update';
             <?= $form->field($model, 'weight')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
-    
+
     <div class="box box-default">
         <div class="box-header with-border">Characteristics</div>
         <div class="box-body">
