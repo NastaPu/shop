@@ -4,7 +4,6 @@ namespace shop\entities\Shop\orders;
 
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use shop\entities\Shop\DeliveryMethod;
-use shop\entities\Shop\Order\Status;
 use shop\entities\User\User;
 use yii\db\ActiveRecord;
 use yii\db\ActiveQuery;
@@ -177,7 +176,7 @@ class Order extends ActiveRecord
                $row['value'],
                $row['created_at']
            );
-        }, Json::decode($this->getAttribute('status-json')));
+        }, Json::decode($this->getAttribute('statuses_json')));
 
         $this->customerData = new CustomerData(
             $this->getAttribute('customer_phone'),

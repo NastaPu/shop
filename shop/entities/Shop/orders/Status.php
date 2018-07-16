@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\entities\Shop\Order;
+namespace shop\entities\Shop\orders;
 
 class Status
 {
