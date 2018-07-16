@@ -4,6 +4,7 @@ use kartik\file\FileInput;
 use shop\entities\Shop\Value;
 use shop\helpers\PriceHelper;
 use shop\helpers\ProductHelper;
+use shop\helpers\WeightHelper;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;
@@ -69,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'quantity',
                             [
                                 'attribute' => 'weight',
-                                'value' => $product->weight / 1000 . ' kg',
+                                'value' => WeightHelper::format($product->weight),
                             ],
                             [
                                 'attribute' => 'category_id',
