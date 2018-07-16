@@ -46,6 +46,14 @@ class Modification extends ActiveRecord
         return $this->code === $code;
     }
 
+    public function checkout($quantity):void
+    {
+        if ($quantity > $this->quantity) {
+            throw new \DomainException('Only ' . $this->quantity . ' items are available.');
+      }
+      $this->quantity -= $quantity;
+    }
+
     public static function tableName(): string
     {
         return '{{%shop_modification}}';

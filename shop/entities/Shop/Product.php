@@ -84,6 +84,23 @@ class Product extends ActiveRecord
         $this->quantity = $quantity;
     }
 
+    public function checkout($modificationId, $quantity)
+    {
+        if($modificationId) {
+            $modifications = $this->modifications;
+            foreach($modifications as $modification) {
+                if($modification->isIdEqualTo($modificationId)) {
+                    $modification->checkout($quantity);
+                    $this->updateModifications($this->modifications);
+                }
+            }
+        }
+        if ($quantity > $this->quantity) {
+            throw new \DomainException('Only ' . $this->quantity . ' items are available.');
+        }
+        $this->quantity -= $quantity;
+    }
+
     //value
 
     public function setValue($id, $value):void
