@@ -3,11 +3,11 @@
 namespace shop\forms\manage\Shop\Product;
 
 use shop\entities\Shop\Brand;
-use shop\entities\Shop\Category;
 use shop\entities\Shop\Characteristic;
 use shop\entities\Shop\Product;
 use shop\forms\CompositeForm;
 use shop\forms\manage\Shop\MetaForm;
+use shop\forms\manage\Shop\QuantityForm;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -16,6 +16,7 @@ use yii\helpers\ArrayHelper;
  * @property CategoriesForm $categories
  * @property PhotoForm $photos
  * @property TagsForm $tags
+ * @property QuantityForm $quantity
  * @property ValueForm[] $values
  */
 class ProductCreateForm extends CompositeForm
@@ -24,6 +25,7 @@ class ProductCreateForm extends CompositeForm
     public $code;
     public $name;
     public $description;
+    public $weight;
 
     public function __construct($config = [])
     {
@@ -32,6 +34,7 @@ class ProductCreateForm extends CompositeForm
         $this->categories = new CategoriesForm();
         $this->photos = new PhotoForm();
         $this->tags = new TagsForm();
+        $this->quantity = new QuantityForm();
         $this->values = array_map(function (Characteristic $characteristic) {
             return new ValueForm($characteristic);
         }, Characteristic::find()->orderBy('sort')->all());
@@ -41,17 +44,18 @@ class ProductCreateForm extends CompositeForm
     public function rules(): array
     {
         return [
-            [['brandId', 'code', 'name'], 'required'],
+            [['brandId', 'code', 'name', 'weight'], 'required'],
             [['code', 'name'], 'string', 'max' => 255],
             [['brandId'], 'integer'],
             [['description'], 'string'],
             [['code'], 'unique', 'targetClass' => Product::class],
+            ['weight', 'integer', 'min' => 0],
         ];
     }
 
     protected function internalForms(): array
     {
-        return ['price', 'meta', 'photos', 'categories', 'tags', 'values'];
+        return ['price', 'quantity', 'meta', 'photos', 'categories', 'tags', 'values'];
     }
 
     public function brandList():array

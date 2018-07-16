@@ -101,4 +101,12 @@ class Cart
         return $this->calculator->getCost($this->items);
     }
 
+    public function getWeight(): int
+    {
+        $this->loadItems();
+        return array_sum(array_map(function (CartItem $item) {
+            return $item->getWeight();
+        }, $this->items));
+   }
+
 }

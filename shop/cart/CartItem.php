@@ -12,9 +12,17 @@ class CartItem
 
     public function __construct(Product $product, $modificationId, int $quantity)
     {
+        if (!$product->canBeCheckout($modificationId, $quantity)) {
+            throw new \DomainException('Quantity is too big.');
+        }
         $this->product = $product;
         $this->modificationId = $modificationId;
         $this->quantity = $quantity;
+    }
+
+    public function getWeight(): int
+    {
+        return $this->product->weight * $this->quantity;
     }
 
     public function getId():string
@@ -30,6 +38,16 @@ class CartItem
     public function changeQuantity($quantity):self
     {
         return new static($this->product, $this->modificationId, $quantity);
+    }
+
+    public function getProductId() :?int
+    {
+        return $this->product->id;
+    }
+
+    public function getModificationId(): ?int
+    {
+        return $this->modificationId;
     }
 
     public function getQuantity():int

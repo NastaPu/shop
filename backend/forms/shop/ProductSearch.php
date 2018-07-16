@@ -20,6 +20,7 @@ class ProductSearch extends Model
     public $category_id;
     public $brand_id;
     public $status;
+    public $quantity;
 
     /**
      * {@inheritdoc}
@@ -27,7 +28,7 @@ class ProductSearch extends Model
     public function rules()
     {
         return [
-            [['id', 'category_id', 'brand_id', 'status'], 'integer'],
+            [['id', 'category_id', 'brand_id', 'status', 'quantity'], 'integer'],
             [['code', 'name'], 'safe'],
         ];
     }
@@ -66,6 +67,7 @@ class ProductSearch extends Model
             'category_id' => $this->category_id,
             'brand_id' => $this->brand_id,
             'status' => $this->status,
+            'quantity' => $this->quantity,
         ]);
 
         $query->andFilterWhere(['like', 'code', $this->code])

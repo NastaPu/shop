@@ -2,6 +2,7 @@
 
 use kartik\file\FileInput;
 use shop\entities\Shop\Value;
+use shop\helpers\PriceHelper;
 use shop\helpers\ProductHelper;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
@@ -57,8 +58,19 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             'code',
                             'name',
-                            'price_new',
-                            'price_old',
+                            [
+                                'attribute' => 'price_new',
+                                'value' => PriceHelper::format($product->price_new),
+                            ],
+                            [
+                                'attribute' => 'price_old',
+                                'value' => PriceHelper::format($product->price_old),
+                            ],
+                            'quantity',
+                            [
+                                'attribute' => 'weight',
+                                'value' => $product->weight / 1000 . ' kg',
+                            ],
                             [
                                 'attribute' => 'category_id',
                                 'value' => ArrayHelper::getValue($product, 'category.name'),
@@ -76,6 +88,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <br />
                     <p>
                         <?= Html::a('Change Price', ['price', 'id' => $product->id], ['class' => 'btn btn-primary']) ?>
+                        <?php if ($product->canChangeQuantity()): ?>
+                            <?= Html::a('Change Quantity', ['quantity', 'id' => $product->id], ['class' => 'btn btn-primary']) ?>
+                        <?php endif; ?>
                     </p>
                 </div>
             </div>
@@ -119,6 +134,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'code',
                     'name',
                     'price',
+                    'quantity',
                     [
                         'class' => ActionColumn::class,
                         'controller' => 'shop/modification',

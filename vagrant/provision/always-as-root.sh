@@ -10,3 +10,4 @@ info "Restart web-stack"
 service php7.0-fpm restart
 service nginx restart
 service mysql restart
+service elasticsearch restart
