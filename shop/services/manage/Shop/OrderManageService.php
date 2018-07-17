@@ -44,4 +44,14 @@ class OrderManageService
         $order = $this->orders->get($id);
         $this->orders->remove($order);
     }
+
+    public function pay($id)
+    {
+
+    }
+
+    public function fail($id)
+    {
+
+    }
 }
