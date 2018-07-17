@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <?php if ($order->canBePaid()): ?>
-        <p>
+        <p style="padding-top: 10px ;">
             <?= Html::a('Pay via Robokassa', ['/payment/robokassa/invoice', 'id' => $order->id], ['class' => 'btn btn-success']) ?>
         </p>
     <?php endif; ?>

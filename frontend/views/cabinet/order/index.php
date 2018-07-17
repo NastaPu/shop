@@ -14,6 +14,9 @@ $this->params['breadcrumbs'][] = ['label' => 'Cabinet', 'url' => ['cabinet/defau
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
+    <p>
+        <?= Html::a('Export', ['export'], ['class' => 'btn btn-primary', 'data-method' => 'post', 'data-confirm' => 'Export?']) ?>
+    </p>
 
     <div class="box">
         <div class="box-body">
