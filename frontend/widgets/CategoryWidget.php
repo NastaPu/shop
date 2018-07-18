@@ -9,6 +9,7 @@ use yii\helpers\Html;
 
 class CategoryWidget extends Widget
 {
+    /**@var Category|null*/
     public $active;
 
     private $category;

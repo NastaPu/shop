@@ -31,20 +31,4 @@ class CategoryAssignment extends ActiveRecord
     {
         return '{{%shop_category_assignment}}';
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    /*public function getCategory()
-    {
-        return $this->hasOne(ShopCategory::className(), ['id' => 'category_id']);
-    }*/
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-   /* public function getProduct()
-    {
-        return $this->hasOne(ShopProduct::className(), ['id' => 'product_id']);
-    }*/
 }

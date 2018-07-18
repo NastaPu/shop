@@ -24,8 +24,8 @@ class OrderManageService
         $order = $this->orders->get($id);
         $order->edit(
             new CustomerData(
-                $form->customer->phone,
-                $form->customer->name
+                $form->customer->name,
+                $form->customer->phone
             ),
             $form->note
         );

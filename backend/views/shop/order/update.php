@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = 'Update';
     <div class="box box-default">
         <div class="box-header with-border">Customer</div>
         <div class="box-body">
-            <?= $form->field($model->customer, 'phone')->textInput() ?>
             <?= $form->field($model->customer, 'name')->textInput() ?>
+            <?= $form->field($model->customer, 'phone')->textInput() ?>
         </div>
     </div>
 

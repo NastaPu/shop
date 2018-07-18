@@ -1,13 +1,13 @@
 <?php
 
-namespace backend\forms\shop;
+namespace backend\forms\blog;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use shop\entities\Shop\Tag;
+use shop\entities\Blog\Tag;
 
 /**
- * TagSearch represents the model behind the search form of `shop\entities\Shop\Tag`.
+ * TagSearch represents the model behind the search form of `shop\entities\Blog\Tag`.
  */
 class TagSearch extends Model
 {
