@@ -1,9 +1,10 @@
 <?php
 
-namespace shop\forms\manage\Shop;
+namespace shop\forms\manage\Blog;
 
-use shop\entities\Shop\Category;
+use shop\entities\Blog\Category;
 use shop\forms\CompositeForm;
+use shop\forms\manage\Shop\MetaForm;
 use shop\validators\SlugValidate;
 use yii\helpers\ArrayHelper;
 
@@ -16,7 +17,7 @@ class CategoryForm extends CompositeForm
     public $slug;
     public $title;
     public $description;
-    public $parentId;
+    public $sort;
 
     private $_category;
 
@@ -27,11 +28,13 @@ class CategoryForm extends CompositeForm
             $this->slug = $category->slug;
             $this->title = $category->title;
             $this->description = $category->description;
-            $this->parentId = $category->parent ? $category->parent->id : null;
+            $this->sort = $category->sort;
             $this->meta = new MetaForm($category->meta);
             $this->_category = $category;
         } else {
             $this->meta = new MetaForm();
+            $this->sort = Category::find()->max('sort')+1;
+
         }
         parent::__construct($config);
     }
@@ -40,7 +43,6 @@ class CategoryForm extends CompositeForm
     {
         return [
             [['name', 'slug'], 'required'],
-            [['parentId'], 'integer'],
             [['name', 'slug', 'title'], 'string', 'max' => 255],
             [['description'], 'string'],
             ['slug', SlugValidate::class],
@@ -51,12 +53,5 @@ class CategoryForm extends CompositeForm
     public function internalForms(): array
     {
         return ['meta'];
-    }
-
-    public function parentCategoriesList():array
-    {
-        return ArrayHelper::map(Category::find()->orderBy('lft')->asArray()->all(), 'id', function (array $category) {
-            return ($category['depth'] > 1 ? str_repeat('-- ', $category['depth'] - 1) . ' ' : '') . $category['name'];
-       });
     }
 }
