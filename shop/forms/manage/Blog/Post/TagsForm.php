@@ -1,11 +1,11 @@
 <?php
 
-namespace shop\forms\manage\Shop\Product;
+namespace shop\forms\manage\Blog\Post;
 
-use shop\entities\Shop\Tag;
+use shop\entities\Blog\Tag;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
-use shop\entities\Shop\Product;
+use shop\entities\Blog\Post;
 
 /**
  * @property array $newNames
@@ -15,10 +15,10 @@ class TagsForm extends Model
     public $existing = [];
     public $textNew;
 
-    public function __construct(Product $product = null, $config = [])
+    public function __construct(Post $post = null, $config = [])
     {
-        if($product) {
-            $this->existing = ArrayHelper::getColumn($product->tagAssignments, 'tag_id');
+        if($post) {
+            $this->existing = ArrayHelper::getColumn($post->tagAssignments, 'tag_id');
         }
         parent::__construct($config);
 
@@ -37,7 +37,7 @@ class TagsForm extends Model
         return array_filter(array_map('trim', preg_split('#\s*,\s*#i', $this->textNew)));
     }
 
-    public function tagList(): array
+    public function tagsList(): array
     {
         return ArrayHelper::map(Tag::find()->orderBy('name')->asArray()->all(), 'id', 'name');
     }

@@ -74,10 +74,13 @@ class ProductManageService
             $product->addPhoto($file);
         }
 
-        foreach ($form->tags->existing as $tagId) {
-            $tag = $this->tags->get($tagId);
-            $product->assignTag($tag->id);
+        if($form->tags->existing) {
+            foreach ($form->tags->existing as $tagId) {
+                $tag = $this->tags->get($tagId);
+                $product->assignTag($tag->id);
+            }
         }
+
         $this->transaction->wrap(function () use ($product, $form) {
             foreach ($form->tags->newNames as $tagName) {
                 if (!$tag = $this->tags->findByName($tagName)) {
@@ -126,10 +129,13 @@ class ProductManageService
             foreach ($form->values as $value) {
                 $product->setValue($value->id, $value->value);
             }
-            foreach ($form->tags->existing as $tagId) {
-                $tag = $this->tags->get($tagId);
-                $product->assignTag($tag->id);
+            if($form->tags->existing) {
+                foreach ($form->tags->existing as $tagId) {
+                    $tag = $this->tags->get($tagId);
+                    $product->assignTag($tag->id);
+                }
             }
+
             foreach ($form->tags->newNames as $tagName) {
                 if (!$tag = $this->tags->findByName($tagName)) {
                     $tag = Tag::create($tagName, $tagName);

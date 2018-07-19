@@ -6,17 +6,17 @@ use shop\entities\Shop\Meta;
 use shop\entities\Blog\Category;
 use shop\forms\manage\Blog\CategoryForm;
 use shop\repositories\Blog\CategoryRepository;
-use shop\repositories\ProductRepository;
+use shop\repositories\Blog\PostRepository;
 
 class CategoryManageService
 {
     private $categories;
-    private $product;
+    private $post;
 
-    public function __construct(CategoryRepository $categories, ProductRepository $product)
+    public function __construct(CategoryRepository $categories, PostRepository $post)
     {
         $this->categories = $categories;
-        $this->product = $product;
+        $this->post = $post;
     }
 
     public function create(CategoryForm $form): Category
@@ -58,6 +58,9 @@ class CategoryManageService
 
     public function remove($id): void
     {
+        if($this->post->existByCategory($id)) {
+            throw  new \DomainException('Unable remove category with posts');
+        }
         $category = $this->categories->get($id);
         $this->categories->remove($category);
     }
