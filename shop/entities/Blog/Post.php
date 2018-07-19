@@ -4,6 +4,7 @@ namespace shop\entities\Blog;
 
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use shop\entities\behavior\MetaBehavior;
+use shop\entities\Blog\post\Comment;
 use shop\entities\Blog\post\TagAssignments;
 use shop\entities\Blog\queries\PostQuery;
 use shop\entities\Shop\Meta;
@@ -24,12 +25,14 @@ use yiidreamteam\upload\ImageUploadBehavior;
  * @property string $content
  * @property string $photo
  * @property int $status
+ * @property int $comment_count
  * @property array $meta_json
  *
  * @property Meta $meta
  * @property Category $category
  * @property TagAssignments[] $tagAssignments
  * @property Tag[] $tags
+ * @property Comment[] $comments
  *
  *  @mixin ImageUploadBehavior
  */
@@ -50,6 +53,7 @@ class Post extends ActiveRecord
         $post->meta = $meta;
         $post->status = self::STATUS_DRAFT;
         $post->created_at = time();
+        $post->comment_count = 0;
         return $post;
     }
 
@@ -97,6 +101,83 @@ class Post extends ActiveRecord
     {
         return $this->meta->title ?: $this->title;
     }
+
+    //comment
+
+    public function addComment($userId, $parentId, $text):Comment
+    {
+        $parent = $parentId ? $this->getComment($parentId) : null;
+        if($parent && !$parent->isActive()) {
+            throw new \DomainException('Cannot add comment to inactive parent');
+        }
+        $comments = $this->comments;
+        $comment = Comment::create($userId, $parent ? $parent->id : null, $text);
+        $comments[] = $comment;
+        $this->updateComments($comments);
+        return $comment;
+    }
+
+    public function activateComment($id):void
+    {
+        $comments = $this->comments;
+        foreach ($comments as $comment) {
+            if($comment->isIdEqualTo($id)) {
+                $comment->activate();
+                $this->updateComments($comments);
+                return;
+            }
+        }
+        throw new \DomainException('Comment is not found');
+    }
+
+    public function removeComment($id)
+    {
+        $comments = $this->comments;
+        foreach ($comments as $i => $comment) {
+            if($comment->isIdEqualTo($id)) {
+                if($this->hasChildren($comment->id)) {
+                    $comment->draft();
+                } else {
+                    unset($comments[$i]);
+                }
+                $this->updateComments($comments);
+                return;
+            }
+        }
+        throw new \DomainException('Comment is not found');
+    }
+
+    public function updateComments(array $comments):void
+    {
+        $this->comments = $comments;
+        $this->comment_count = count(array_filter($comments, function (Comment $comment) {
+            return $comment->isActive();
+        }));
+    }
+
+    public function getComment($id):Comment
+    {
+        $comments = $this->comments;
+        foreach ($comments as $comment) {
+            if($comment->isIdEqualTo($id)) {
+                return $comment;
+            }
+        }
+        throw new \DomainException('Comment is not found');
+    }
+
+    public function hasChildren($id):bool
+    {
+        $comments = $this->comments;
+        foreach ($comments as $comment) {
+            if($comment->isChildOf($id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //tag
 
     public function assignTag($id): void
     {
