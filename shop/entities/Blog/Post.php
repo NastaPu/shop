@@ -9,6 +9,7 @@ use shop\entities\Blog\post\TagAssignments;
 use shop\entities\Blog\queries\PostQuery;
 use shop\entities\Shop\Meta;
 use shop\services\WaterMarker;
+use Yii;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 use yii\web\UploadedFile;
@@ -107,6 +108,9 @@ class Post extends ActiveRecord
     public function addComment($userId, $parentId, $text):Comment
     {
         $parent = $parentId ? $this->getComment($parentId) : null;
+        if(Yii::$app->user->id != $userId) {
+            throw new \DomainException('Comments  can only authorized users');
+        }
         if($parent && !$parent->isActive()) {
             throw new \DomainException('Cannot add comment to inactive parent');
         }
@@ -222,6 +226,11 @@ class Post extends ActiveRecord
         return $this->hasMany(TagAssignments::class, ['post_id' => 'id']);
     }
 
+    public function getComments(): ActiveQuery
+    {
+        return $this->hasMany(Comment::class, ['post_id' => 'id']);
+    }
+
     public static function tableName():string
     {
         return '{{%blog_posts}}';
@@ -232,7 +241,7 @@ class Post extends ActiveRecord
             MetaBehavior::className(),
             [
                 'class' => SaveRelationsBehavior::className(),
-                'relations' => ['tagAssignments'],
+                'relations' => ['tagAssignments', 'comments'],
             ],
             [
                 'class' => ImageUploadBehavior::className(),

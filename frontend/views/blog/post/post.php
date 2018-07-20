@@ -4,6 +4,7 @@
 /* @var $dataProvider yii\data\DataProviderInterface */
 /* @var $post shop\entities\Blog\Post */
 
+use frontend\widgets\Blog\CommentWidget;
 use yii\helpers\Html;
 
 $this->title = $post->getSeoTitle();
@@ -33,3 +34,7 @@ foreach ($post->tags as $tag){
 </article>
 
 <p>Tags: <?= implode(', ', $tagLinks) ?></p>
+
+<?= CommentWidget::widget([
+    'post' => $post,
+]) ?>
