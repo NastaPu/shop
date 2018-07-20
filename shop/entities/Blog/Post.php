@@ -25,7 +25,7 @@ use yiidreamteam\upload\ImageUploadBehavior;
  * @property string $content
  * @property string $photo
  * @property int $status
- * @property int $comment_count
+ * @property int $comments_count
  * @property array $meta_json
  *
  * @property Meta $meta
@@ -53,7 +53,7 @@ class Post extends ActiveRecord
         $post->meta = $meta;
         $post->status = self::STATUS_DRAFT;
         $post->created_at = time();
-        $post->comment_count = 0;
+        $post->comments_count = 0;
         return $post;
     }
 
@@ -150,7 +150,7 @@ class Post extends ActiveRecord
     public function updateComments(array $comments):void
     {
         $this->comments = $comments;
-        $this->comment_count = count(array_filter($comments, function (Comment $comment) {
+        $this->comments_count = count(array_filter($comments, function (Comment $comment) {
             return $comment->isActive();
         }));
     }
@@ -245,6 +245,7 @@ class Post extends ActiveRecord
                 'thumbs' => [
                     'admin' => ['width' => 100, 'height' => 70],
                     'thumb' => ['width' => 640, 'height' => 480],
+                    'blog_list' => ['width' => 1000, 'height' => 150],
                     'origin' => ['processor' => [new WaterMarker(1024, 768, '@frontend/web/image/logo.png'), 'process']],
                 ],
             ],
