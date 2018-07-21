@@ -1,6 +1,7 @@
 <?php
 /* @var $this \yii\web\View */
 use frontend\widgets\FeaturedProductsWidget;
+use frontend\widgets\Blog\LastPostWidget;
 
 /* @var $content string */
 \frontend\assets\OwlCarouselAsset::register($this);
@@ -24,6 +25,12 @@ use frontend\widgets\FeaturedProductsWidget;
 
             <?= FeaturedProductsWidget::widget([
                 'limit' => 4,
+            ]) ?>
+
+            <h3>Last Posts</h3>
+
+            <?= LastPostWidget::widget([
+                 'limit' => 4
             ]) ?>
             
             <div id="carousel0" class="owl-carousel">

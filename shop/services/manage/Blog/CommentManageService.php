@@ -6,6 +6,7 @@ use shop\entities\Blog\post\Comment;
 use shop\forms\manage\Blog\CommentForm;
 use shop\repositories\Blog\PostRepository;
 use shop\repositories\UserRepository;
+use Yii;
 
 class CommentManageService
 {

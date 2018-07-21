@@ -32,7 +32,7 @@ class UserRepository
     public function getBy(array $value):User
     {
         if (!$user = User::find()->andWhere($value)->limit(1)->one()) {
-            throw new \RuntimeException('User not found');
+            throw new \DomainException('User not found');
         }
         return $user;
     }
