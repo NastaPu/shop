@@ -141,11 +141,6 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
     public function actionSignup()
     {
         $this->layout = 'cabinet';

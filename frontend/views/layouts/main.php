@@ -138,7 +138,6 @@ OwlCarouselAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Catalog', 'url' => ['/shop/catalog/index']],
             ['label' => 'Blog', 'url' => ['/blog/post/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
         ],
     ]);
