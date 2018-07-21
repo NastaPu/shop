@@ -121,6 +121,20 @@ class Post extends ActiveRecord
         return $comment;
     }
 
+    public function editComment($id, $parentId, $text)
+    {
+        $parent = $parentId ? $this->getComment($parentId) : null;
+        $comments = $this->comments;
+        foreach ($comments as $comment) {
+            if($comment->isIdEqualTo($id)) {
+                $comment->edit($parent ? $parent->id : null, $text);
+                $this->updateComments($comments);
+                return;
+            }
+        }
+        throw new \DomainException('Comment is not found');
+    }
+
     public function activateComment($id):void
     {
         $comments = $this->comments;
