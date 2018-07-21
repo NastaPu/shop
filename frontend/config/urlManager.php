@@ -19,7 +19,6 @@ return [
             '<_c:[\w\-]+>/<id:\d+>/<_a:[\w\-]+>' => '<_c>/<_a>',
 
             'catalog/product/<id:\d+>' => 'shop/catalog/product',
-            //['class' => 'frontend\urls\CategoryUrlRule'],
 
         ],
 
