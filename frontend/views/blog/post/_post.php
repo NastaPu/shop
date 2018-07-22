@@ -18,5 +18,11 @@ $url = Url::to(['post', 'id' =>$model->id]);
         </div>
     <?php endif; ?>
     <div class="h2"><a href="<?= Html::encode($url) ?>"><?= Html::encode($model->title) ?></a></div>
-    <p><?= Yii::$app->formatter->asNtext($model->description) ?></p>
+    <p><?= Yii::$app->formatter->asHtml($model->description, [
+            'Attr.AllowedRel' => array('nofollow'),
+            'HTML.SafeObject' => true,
+            'Output.FlashCompat' => true,
+            'HTML.SafeIframe' => true,
+            'URI.SafeIframeRegexp'=>'%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%',
+        ]) ?>
 </div>

@@ -48,8 +48,9 @@
                         ['label' => 'Comments', 'icon' => 'file-o', 'url' => ['/blog/comment/index'], 'active' => $this->context->id == 'blog/comment'],
                     ]],
                     ['label' => 'Content', 'icon' => 'folder', 'items' => [
-                        ['label' => 'Pages', 'icon' => 'file-o', 'url' => ['/page/index'], 'active' => $this->context->id == 'page']
-                     ]],
+                        ['label' => 'Pages', 'icon' => 'file-o', 'url' => ['/page/index'], 'active' => $this->context->id == 'page'],
+                        ['label' => 'Files', 'icon' => 'file-o', 'url' => ['/file/index'], 'active' => $this->context->id == 'file']
+                    ]],
                 ]
             ]
         ) ?>

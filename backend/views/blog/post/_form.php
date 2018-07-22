@@ -40,7 +40,7 @@ use yii\widgets\ActiveForm;
         <div class="box-body">
             <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'description')->widget(CKEditor::className()) ?>
-            <?= $form->field($model, 'content')->textarea(['rows' => 20]) ?>
+            <?= $form->field($model, 'content')->widget(CKEditor::className()) ?>
         </div>
     </div>
 

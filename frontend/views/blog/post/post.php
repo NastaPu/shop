@@ -30,7 +30,7 @@ foreach ($post->tags as $tag){
         <p><img src="<?= Html::encode($post->getThumbFileUrl('photo', 'origin')) ?>" alt="" class="img-responsive" /></p>
     <?php endif; ?>
 
-    <?= Yii::$app->formatter->asHtml($post->description, [
+    <?= Yii::$app->formatter->asHtml($post->content, [
         'Attr.AllowedRel' => array('nofollow'),
         'HTML.SafeObject' => true,
         'Output.FlashCompat' => true,
