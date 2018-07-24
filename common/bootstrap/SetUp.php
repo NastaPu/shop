@@ -8,7 +8,7 @@ use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\CookieStorage;
-use shop\cart\storage\SessionStorage;
+use yii\rbac\ManagerInterface;
 use yii\base\BootstrapInterface;
 use yii\mail\MailerInterface;
 
@@ -42,6 +42,10 @@ class SetUp implements BootstrapInterface
                 new CookieStorage('cart', 3600),
                 new DynamicCost(new SimpleCost())
             );
+        });
+
+        $container->setSingleton(ManagerInterface::class, function () use ($app) {
+            return $app->authManager;
         });
     }
 }

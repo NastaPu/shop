@@ -5,7 +5,7 @@ use yii\bootstrap\ActiveForm;
 
 
 /* @var $this yii\web\View */
-/* @var $model shop\entities\User\User */
+/* @var $model shop\forms\manage\UserCreateForm */
 
 $this->title = 'Create User';
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'username')->textInput(['maxLength' => true]) ?>
     <?= $form->field($model, 'email')->textInput(['maxLength' => true]) ?>
     <?= $form->field($model, 'password')->passwordInput(['maxLength' => true]) ?>
+    <?= $form->field($model, 'role')->dropDownList($model->rolesList()) ?>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
     </div>

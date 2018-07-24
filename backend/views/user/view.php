@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use shop\helpers\UserHelper;
@@ -38,6 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         'attribute' => 'status',
                         'value' => UserHelper::statusLabel($model->status),
                         'format' => 'raw',//не прогонять через encode
+                    ],
+                    [
+                        'label' => 'Role',
+                        'value' => implode(', ', ArrayHelper::getColumn(Yii::$app->authManager->getRolesByUser($model->id), 'description')),
+                        'format' => 'raw',
                     ],
                     'created_at:datetime',
                 ],
