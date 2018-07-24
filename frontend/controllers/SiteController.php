@@ -1,11 +1,11 @@
 <?php
 namespace frontend\controllers;
 
+use common\auth\Identity;
 use shop\services\auth\AuthService;
 use shop\services\contact\ContactService;
 use shop\services\auth\PasswordResetService;
 use Yii;
-use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -16,7 +16,6 @@ use shop\forms\auth\ResetPasswordForm;
 use shop\forms\auth\SignupForm;
 use shop\forms\ContactForm;
 use shop\services\auth\SignupService;
-use shop\entities\User\User;
 
 /**
  * Site controller
@@ -24,15 +23,18 @@ use shop\entities\User\User;
 class SiteController extends Controller
 {
     private $authService;
+    private $signupService;
 
     public function __construct(
         $id,
         $module,
         AuthService $authService,
+        SignupService $signupService,
         $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->authService = $authService;
+        $this->signupService = $signupService;
     }
 
     public function behaviors()
@@ -101,7 +103,7 @@ class SiteController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $user = $this->authService->auth($form);
-                Yii::$app->user->login($user, $form->rememberMe ? Yii::$app->params['user.rememberMeDuration'] : 0);
+                Yii::$app->user->login(new Identity($user), $form->rememberMe ? Yii::$app->params['user.rememberMeDuration'] : 0);
                 return $this->goBack();
             } catch (\DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
@@ -147,7 +149,7 @@ class SiteController extends Controller
         $form = new SignupForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
-                (new SignupService())->signup($form);
+                $this->signupService->signup($form);
                 Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
                 return $this->goHome();
             } catch (\DomainException $e) {
@@ -164,7 +166,7 @@ class SiteController extends Controller
     public function actionConfirm($token)
     {
         try {
-            (new SignupService())->confirm($token);
+            $this->signupService->confirm($token);
             Yii::$app->session->setFlash('success', 'Your email is confirmed');
             return $this->redirect(['login']);
         } catch (\DomainException $e) {
