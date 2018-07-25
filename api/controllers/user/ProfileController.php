@@ -7,6 +7,19 @@ use shop\entities\User\User;
 use shop\helpers\UserHelper;
 use yii\rest\Controller;
 
+/**
+ * @SWG\Get(
+ *     path="/user/profile",
+ *     tags={"Profile"},
+ *     description="Returns profile info",
+ *     @SWG\Response(
+ *         response=200,
+ *         description="Success response",
+ *         @SWG\Schema(ref="#/definitions/Profile")
+ *     ),
+ *     security={{"Bearer": {}, "OAuth2": {}}}
+ * )
+ */
 class ProfileController extends Controller
 {
     public function actionIndex(): array
@@ -42,5 +55,18 @@ class ProfileController extends Controller
             ]
         ];
     }
+
+    /**
+     *  @SWG\Definition(
+     *     definition="Profile",
+     *     type="object",
+     *     required={"id"},
+     *     @SWG\Property(property="id", type="integer"),
+     *     @SWG\Property(property="name", type="string"),
+     *     @SWG\Property(property="email", type="string"),
+     *     @SWG\Property(property="city", type="string"),
+     *     @SWG\Property(property="role", type="string")
+     * )
+     */
 
 }

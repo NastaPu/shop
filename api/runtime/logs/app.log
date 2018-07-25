@@ -17074,3 +17074,271 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2018-07-25 22:44:58 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('shop/product/in...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-25 22:44:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session' => '1o7dr07e094mjthv0romgqu081ht9qp9'
+    '_identity' => '4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[12,\"AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_REFERER' => 'http://api.sh.com/docs/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_session=1o7dr07e094mjthv0romgqu081ht9qp9; _identity=4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%22AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3307'
+    'REDIRECT_URL' => '/shop/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/shop/products'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532547896.257
+    'REQUEST_TIME' => 1532547896
+    'argv' => []
+    'argc' => 0
+]
+2018-07-25 22:46:21 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('shop/product/in...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-25 22:46:21 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session' => '1o7dr07e094mjthv0romgqu081ht9qp9'
+    '_identity' => '4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[12,\"AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_REFERER' => 'http://api.sh.com/docs/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_session=1o7dr07e094mjthv0romgqu081ht9qp9; _identity=4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%22AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3309'
+    'REDIRECT_URL' => '/shop/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/shop/products'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532547981.442
+    'REQUEST_TIME' => 1532547981
+    'argv' => []
+    'argc' => 0
+]
+2018-07-25 22:47:11 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('shop/cart/index', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-25 22:47:11 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session' => '1o7dr07e094mjthv0romgqu081ht9qp9'
+    '_identity' => '4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[12,\"AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_REFERER' => 'http://api.sh.com/docs/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_session=1o7dr07e094mjthv0romgqu081ht9qp9; _identity=4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%22AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3311'
+    'REDIRECT_URL' => '/shop/cart'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/shop/cart'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532548031.173
+    'REQUEST_TIME' => 1532548031
+    'argv' => []
+    'argc' => 0
+]
+2018-07-25 22:47:13 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('shop/cart/index', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-25 22:47:13 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session' => '1o7dr07e094mjthv0romgqu081ht9qp9'
+    '_identity' => '4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[12,\"AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_REFERER' => 'http://api.sh.com/docs/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_session=1o7dr07e094mjthv0romgqu081ht9qp9; _identity=4cb11e1a3fe5c5db4a494b67772523c4e4456078513060479a3fe84ee4a8b2a7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%22AaKg3KH3tDpcm191WQwZPVuzo3EDRdhz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3313'
+    'REDIRECT_URL' => '/shop/cart'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/shop/cart'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532548033.057
+    'REQUEST_TIME' => 1532548033
+    'argv' => []
+    'argc' => 0
+]
