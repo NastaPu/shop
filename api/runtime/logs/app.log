@@ -12525,3 +12525,2821 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2018-07-24 18:02:36 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:316
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:02:32 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '1871'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532444550.026
+    'REQUEST_TIME' => 1532444550
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:02:37 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:316
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:02:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '1872'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532444554.358
+    'REQUEST_TIME' => 1532444554
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:18:59 [127.0.0.1][-][-][error][Error] Error: Class 'filsh\yii2\oauth2server\ArrayHelper' not found in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Module.php:117
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(37): filsh\yii2\oauth2server\Module->getRequest()
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:18:58 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2144'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532445537.607
+    'REQUEST_TIME' => 1532445537
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:22:55 [127.0.0.1][-][-][error][yii\web\HttpException:400] filsh\yii2\oauth2server\exceptions\HttpException: The grant type was not specified in the request in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\ErrorToExceptionFilter.php:34
+Stack trace:
+#0 [internal function]: filsh\yii2\oauth2server\filters\ErrorToExceptionFilter->afterAction(Object(yii\base\ActionEvent))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('afterAction', Object(yii\base\ActionEvent))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\rest\Controller.php(76): yii\base\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:22:54 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2147'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532445774.856
+    'REQUEST_TIME' => 1532445774
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:30:36 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:316
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:30:36 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2264'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532446236.131
+    'REQUEST_TIME' => 1532446236
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:33:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2018-07-24 18:33:21 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2268'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532446401.611
+    'REQUEST_TIME' => 1532446401
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:34:19 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:316
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 18:34:19 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2270'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532446459.252
+    'REQUEST_TIME' => 1532446459
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 18:58:50 [127.0.0.1][-][-][error][yii\base\ErrorException:1] yii\base\ErrorException: Class OAuth2\Server contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (OAuth2\Controller\ResourceControllerInterface::getToken) in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:48
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-07-24 18:58:46 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2452'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532447925.116
+    'REQUEST_TIME' => 1532447925
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 19:29:37 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:282
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 19:29:36 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2550'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532449776.39
+    'REQUEST_TIME' => 1532449776
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 19:34:06 [127.0.0.1][-][-][error][yii\web\HttpException:400] filsh\yii2\oauth2server\exceptions\HttpException: The grant type was not specified in the request in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\ErrorToExceptionFilter.php:34
+Stack trace:
+#0 [internal function]: filsh\yii2\oauth2server\filters\ErrorToExceptionFilter->afterAction(Object(yii\base\ActionEvent))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('afterAction', Object(yii\base\ActionEvent))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\rest\Controller.php(76): yii\base\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 19:34:04 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2603'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532450044.727
+    'REQUEST_TIME' => 1532450044
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:05:03 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "oauth2/rest/token". in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-07-24 20:05:02 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '2903'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532451902.744
+    'REQUEST_TIME' => 1532451902
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:08:09 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "oauth2/rest/token". in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-07-24 20:08:09 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3030'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452089.111
+    'REQUEST_TIME' => 1532452089
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:09:28 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2018-07-24 20:09:28 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3117'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452168.659
+    'REQUEST_TIME' => 1532452168
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:09:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "oauth2/rest/token". in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-07-24 20:09:33 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3118'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452172.788
+    'REQUEST_TIME' => 1532452172
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:14:11 [127.0.0.1][-][-][error][ReflectionException] ReflectionException: Class app\models\User does not exist in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\Container.php:428
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\Container.php(428): ReflectionClass->__construct('app\\models\\User')
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\Container.php(364): yii\di\Container->getDependencies('app\\models\\User')
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\models\\User', Array, Array)
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\Container.php(174): yii\di\Container->get('app\\models\\User', Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Module.php(89): yii\di\Container->get('user_credential...')
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(14): filsh\yii2\oauth2server\Module->getServer()
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#7 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#11 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#12 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#13 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2018-07-24 20:14:11 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3134'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452451.109
+    'REQUEST_TIME' => 1532452451
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:15:07 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:15:03 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3135'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452503.11
+    'REQUEST_TIME' => 1532452503
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:21:14 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:21:13 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '148'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3168'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452873.244
+    'REQUEST_TIME' => 1532452873
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:22:33 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:22:33 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '135'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3171'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452953.161
+    'REQUEST_TIME' => 1532452953
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:22:35 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:22:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '135'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3173'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452954.975
+    'REQUEST_TIME' => 1532452954
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:22:37 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:22:36 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '135'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3175'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532452956.622
+    'REQUEST_TIME' => 1532452956
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:23:48 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:23:48 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3177'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453028.346
+    'REQUEST_TIME' => 1532453028
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:23:49 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:23:49 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3179'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453029.536
+    'REQUEST_TIME' => 1532453029
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:23:49 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:23:49 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3180'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453029.739
+    'REQUEST_TIME' => 1532453029
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:23:50 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:23:50 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3183'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453029.95
+    'REQUEST_TIME' => 1532453029
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:23:50 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:23:50 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3184'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453030.124
+    'REQUEST_TIME' => 1532453030
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:24:00 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:24:00 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '13212'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=13212'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3187'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453039.54
+    'REQUEST_TIME' => 1532453039
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:24:03 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:24:01 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '19575'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=19575'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3188'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453039.529
+    'REQUEST_TIME' => 1532453039
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:24:56 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:24:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '19728'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=19728'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3191'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453096.323
+    'REQUEST_TIME' => 1532453096
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:25:25 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:25:25 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3193'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453125.733
+    'REQUEST_TIME' => 1532453125
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:25:26 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:25:26 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3195'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453126.605
+    'REQUEST_TIME' => 1532453126
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:25:27 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:25:27 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3197'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453127.149
+    'REQUEST_TIME' => 1532453127
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:25:27 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:25:27 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3199'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453127.511
+    'REQUEST_TIME' => 1532453127
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:25:28 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:25:27 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3201'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453127.806
+    'REQUEST_TIME' => 1532453127
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:28:31 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:28:31 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3208'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453311.831
+    'REQUEST_TIME' => 1532453311
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:30:28 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:30:28 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3210'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453428.428
+    'REQUEST_TIME' => 1532453428
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:37:48 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:37:46 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3488'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453866.245
+    'REQUEST_TIME' => 1532453866
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:38:34 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:38:34 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3503'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453914.245
+    'REQUEST_TIME' => 1532453914
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:38:35 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:38:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3505'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453915.613
+    'REQUEST_TIME' => 1532453915
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:39:18 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:39:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3518'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453958.576
+    'REQUEST_TIME' => 1532453958
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:39:20 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:39:20 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3520'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532453960.352
+    'REQUEST_TIME' => 1532453960
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:42:59 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\auth\CompositeAuth.php(18): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/default/...', Array)
+#10 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2018-07-24 20:42:58 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3706'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532454178.712
+    'REQUEST_TIME' => 1532454178
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 20:58:01 [127.0.0.1][-][-][error][TypeError] TypeError: Argument 1 passed to OAuth2\Server::handleTokenRequest() must be an instance of OAuth2\RequestInterface, instance of yii\web\Request given, called in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php on line 39 and defined in D:\OpenServer\OSPanel\domains\sh\vendor\bshaffer\oauth2-server-php\src\OAuth2\Server.php:316
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(39): OAuth2\Server->handleTokenRequest(Object(yii\web\Request), NULL)
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#2 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 20:57:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3827'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532455078.719
+    'REQUEST_TIME' => 1532455078
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 21:01:49 [127.0.0.1][-][-][error][yii\web\HttpException:400] filsh\yii2\oauth2server\exceptions\HttpException: The grant type was not specified in the request in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\ErrorToExceptionFilter.php:34
+Stack trace:
+#0 [internal function]: filsh\yii2\oauth2server\filters\ErrorToExceptionFilter->afterAction(Object(yii\base\ActionEvent))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('afterAction', Object(yii\base\ActionEvent))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\rest\Controller.php(76): yii\base\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 21:01:48 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3899'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532455307.965
+    'REQUEST_TIME' => 1532455307
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 21:04:29 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: filsh\yii2\oauth2server\Module::_request in D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\di\ServiceLocator.php(77): yii\base\Component->__get('_request')
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Module.php(118): yii\di\ServiceLocator->__get('_request')
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\Server.php(37): filsh\yii2\oauth2server\Module->getRequest()
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\controllers\RestController.php(25): filsh\yii2\oauth2server\Server->handleTokenRequest()
+#4 [internal function]: filsh\yii2\oauth2server\controllers\RestController->actionToken()
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#8 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#9 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2018-07-24 21:04:29 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '3924'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532455469.648
+    'REQUEST_TIME' => 1532455469
+    'argv' => []
+    'argc' => 0
+]
+2018-07-24 21:07:19 [127.0.0.1][-][-][error][yii\web\HttpException:400] filsh\yii2\oauth2server\exceptions\HttpException: The grant type was not specified in the request in D:\OpenServer\OSPanel\domains\sh\vendor\filsh\yii2-oauth2-server\filters\ErrorToExceptionFilter.php:34
+Stack trace:
+#0 [internal function]: filsh\yii2\oauth2server\filters\ErrorToExceptionFilter->afterAction(Object(yii\base\ActionEvent))
+#1 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(303): yii\base\Component->trigger('afterAction', Object(yii\base\ActionEvent))
+#3 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\rest\Controller.php(76): yii\base\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#4 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\base\InlineAction), Array)
+#5 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('token', Array)
+#6 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('oauth2/rest/tok...', Array)
+#7 D:\OpenServer\OSPanel\domains\sh\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\OpenServer\OSPanel\domains\sh\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2018-07-24 21:07:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'application/json'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'CONTENT_TYPE' => 'application/json; charset=UTF-8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'api.sh.com'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_172)'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'PATH' => 'd:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\ext;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;d:\\openserver\\ospanel\\modules\\php\\PHP-7.1;d:\\openserver\\ospanel\\modules\\imagemagick;d:\\openserver\\ospanel\\modules\\wget\\bin;d:\\openserver\\ospanel\\modules\\git;d:\\openserver\\ospanel\\modules\\git\\bin;d:\\openserver\\ospanel\\modules\\git\\mingw\\bin;d:\\openserver\\ospanel\\modules\\git\\cmd;d:\\openserver\\ospanel\\modules\\database\\MySQL-5.7\\bin;d:\\openserver\\ospanel\\modules\\memcached\\Memcached-1.4;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7\\bin;d:\\openserver\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'api.sh.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OpenServer/OSPanel/domains/sh/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OpenServer/OSPanel/domains/sh/api/web/index.php'
+    'REMOTE_PORT' => '4012'
+    'REDIRECT_URL' => '/oauth2/token'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/oauth2/token'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1532455638.87
+    'REQUEST_TIME' => 1532455638
+    'argv' => []
+    'argc' => 0
+]

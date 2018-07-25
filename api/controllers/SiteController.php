@@ -6,6 +6,8 @@ use yii\rest\Controller;
 
 class SiteController extends Controller
 {
+    Public $enableCsrfValidation = false;
+
     public function actionIndex(): array
     {
         return [
