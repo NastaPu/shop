@@ -83,6 +83,7 @@ return [
             'rules' => [
                 '' => 'site/index',
                 'POST oauth2/<action:\w+>' => 'oauth2/rest/<action>',
+                'profile' => 'user/profile/index',
             ],
         ],
     ],

@@ -16,10 +16,10 @@ class UserHelper
         ];
     }
 
-   /* public function statusName($status)
+    public static function statusName($status)
     {
         return ArrayHelper::getValue(self::statusList(), $status);
-    }*/
+    }
 
     public static function statusLabel($status)
     {
