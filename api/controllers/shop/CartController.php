@@ -68,6 +68,7 @@ class CartController extends Controller
                     '_links' => [
                         'quantity' => ['href' => Url::to(['quantity', 'id' => $item->getId()], true)],
                         'remove' => ['href' => Url::to(['delete', 'id' => $item->getId()], true)],
+
                     ],
                 ];
             }, $cart->getItems()),
@@ -80,6 +81,9 @@ class CartController extends Controller
                     ];
                 }, $cost->getDiscounts()),
                 'total' => $cost->getTotal(),
+            ],
+            '_links' => [
+                'checkout' => ['href' => Url::to(['/shop/checkout/index'], true)],
             ],
         ];
     }
