@@ -94,6 +94,11 @@ return [
                 'shop/products/<id:\d+>/wish' => 'shop/wishlist/add',
                 'GET shop/wishlist' => 'shop/wishlist/index',
                 'DELETE shop/wishlist/<id:\d+>' => 'shop/wishlist/delete',
+
+                'GET shop/cart' => 'shop/cart/index',
+                'DELETE shop/cart' => 'shop/cart/clear',
+                'PUT shop/cart/<id:\w+>/quantity' => 'shop/cart/quantity',
+                'DELETE shop/cart/<id:\w+>' => 'shop/cart/delete',
             ],
         ],
     ],
