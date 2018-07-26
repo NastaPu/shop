@@ -7,6 +7,7 @@ use shop\entities\User\User;
 use shop\forms\auth\SignupForm;
 use shop\repositories\UserRepository;
 use shop\services\manage\TransactionManager;
+use shop\services\newsletter\Newsletter;
 use shop\services\RoleManager;
 use Yii;
 
@@ -15,12 +16,14 @@ class SignupService
     private $transaction;
     private $roles;
     private $users;
+    private $newsletter;
 
-    public function __construct(RoleManager $roles, TransactionManager $transaction, UserRepository $users)
+    public function __construct(RoleManager $roles, TransactionManager $transaction, UserRepository $users, Newsletter $newsletter)
     {
         $this->transaction = $transaction;
         $this->roles = $roles;
         $this->users = $users;
+        $this->newsletter = $newsletter;
     }
 
     public function signup(SignupForm $form):void
@@ -58,13 +61,12 @@ class SignupService
         if (empty($token)) {
             throw new \DomainException('Empty confirm token ');
         }
-        $user = User::findOne(['email_confirm_token' => $token]);
-        if (!$user) {
-            throw new \DomainException('User is not found ');
-        }
+        $user =  $this->users->getByEmailConfirmToken($token);
         $user->confirmSignup();
         if (!$user->save()) {
             throw new \RuntimeException('Saving error ');
         }
+
+        $this->newsletter->subscribe($user->email);
     }
 }
