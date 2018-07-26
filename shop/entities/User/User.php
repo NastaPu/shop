@@ -15,6 +15,7 @@ use yii\db\ActiveQuery;
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
+ * @property string $phone
  * @property string $email_confirm_token
  * @property string $auth_key
  * @property integer $status
@@ -30,11 +31,12 @@ class User extends ActiveRecord
     const STATUS_WAIT = 0;
     const STATUS_ACTIVE = 10;
 
-    public static function create(string $username, string $email, string $password): self
+    public static function create(string $username, string $email, string $phone, string $password): self
     {
         $user = new static();
         $user->username = $username;
         $user->email = $email;
+        $user->phone = $phone;
         $user->setPassword($password);
         $user->created_at = time();
         $user->status = self::STATUS_ACTIVE;
@@ -42,18 +44,27 @@ class User extends ActiveRecord
         return $user;
     }
 
-    public function edit(string $username, string $email)
+    public function edit(string $username, string $email, string $phone)
     {
         $this->username = $username;
         $this->email = $email;
+        $this->phone = $phone;
         $this->updated_at = time();
     }
 
-    public static function signup(string $username, string $email, string $password): self
+    public function editProfile(string $email, string $phone)
+    {
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->updated_at = time();
+    }
+
+    public static function signup(string $username, string $email, string $phone, string $password): self
     {
         $user = new static();
         $user->username = $username;
         $user->email = $email;
+        $user->phone = $phone;
         $user->setPassword($password);
         $user->created_at = time();
         $user->status = self::STATUS_WAIT;

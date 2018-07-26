@@ -31,6 +31,7 @@ class SignupService
         $user = User::signup(
             $form->username,
             $form->email,
+            $form->phone,
             $form->password
         );
 

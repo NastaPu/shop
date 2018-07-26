@@ -13,14 +13,15 @@ class UserCreateForm extends Model
     public $email;
     public $password;
     public $role;
+    public $phone;
 
     public function rules(): array
     {
         return [
-            [['username', 'email', 'password', 'role'], 'required'],
+            [['username', 'email', 'password', 'role', 'phone'], 'required'],
             ['email', 'email'],
             [['username', 'email'], 'string', 'max' => 255],
-            [['username', 'email'], 'unique', 'targetClass' => User::class],
+            [['username', 'email', 'phone'], 'unique', 'targetClass' => User::class],
             ['password', 'string', 'min' => 6],
         ];
     }

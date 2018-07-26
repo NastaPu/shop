@@ -27,7 +27,7 @@ class UserManageService
 
     public function create(UserCreateForm $form):User
     {
-        $user = User::create($form->username, $form->email, $form->password);
+        $user = User::create($form->username, $form->email, $form->password, $form->phone);
         $this->transaction->wrap(function () use ($user) {
             $this->repository->save($user);
             $this->roles->assign($user->id, Rbac::ROLE_USER);
@@ -40,7 +40,8 @@ class UserManageService
         $user = $this->repository->get($id);
         $user->edit(
             $form->username,
-            $form->email
+            $form->email,
+            $form->phone
         );
         $this->transaction->wrap(function () use ($user) {
             $this->repository->save($user);
