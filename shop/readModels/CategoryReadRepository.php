@@ -7,6 +7,15 @@ use yii\helpers\ArrayHelper;
 
 class CategoryReadRepository
 {
+    /**
+     * @return Category[]
+     */
+    public function getAll(): array
+    {
+        return Category::find()->andWhere(['>', 'depth', 0])->orderBy('lft')->all();
+    }
+
+
     public function getRoot(): Category
     {
         return Category::find()->roots()->one();

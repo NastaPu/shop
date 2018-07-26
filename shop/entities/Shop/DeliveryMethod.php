@@ -47,4 +47,9 @@ class DeliveryMethod extends ActiveRecord
         return new DeliveryMethodQuery(static::class);
     }
 
+    public function isAvailableForWeight($weight)
+    {
+        return (!$this->min_weight || $this->min_weight <= $weight) && (!$this->max_weight || $weight <= $this->max_weight);
+    }
+
 }

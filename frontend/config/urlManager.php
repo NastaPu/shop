@@ -20,6 +20,8 @@ return [
 
             'catalog/product/<id:\d+>' => 'shop/catalog/product',
 
+            ['pattern' => 'yandex-market', 'route' => 'market/index', 'suffix' => '.xml'],
+
         ],
 
 ];

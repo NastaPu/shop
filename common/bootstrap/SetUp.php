@@ -8,6 +8,8 @@ use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
+use shop\services\yandex\ShopInfo;
+use shop\services\yandex\YandexMarket;
 use yii\rbac\ManagerInterface;
 use yii\base\BootstrapInterface;
 use yii\mail\MailerInterface;
@@ -47,5 +49,9 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(ManagerInterface::class, function () use ($app) {
             return $app->authManager;
         });
+
+        $container->setSingleton(YandexMarket::class, [], [
+            new ShopInfo($app->name, $app->name, $app->params['frontendHostInfo']),
+        ]);
     }
 }

@@ -155,4 +155,12 @@ class ProductReadRepository
             'sort' => false,
         ]);
     }
+
+    /**
+     * @return iterable|Product[]
+     */
+    public function getAllIterator()
+    {
+        return Product::find()->alias('p')->active('p')->with('mainPhoto', 'brand')->each();
+    }
 }
