@@ -10,6 +10,8 @@ use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
 use shop\services\newsletter\Newsletter;
+use shop\services\sms\SmsRu;
+use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
 use shop\services\yandex\YandexMarket;
 use yii\rbac\ManagerInterface;
@@ -62,5 +64,9 @@ class SetUp implements BootstrapInterface
             $app->params['mailChimpListId']
             );
         });
+
+        $container->setSingleton(SmsSender::class, SmsRu::class, [
+            $app->params['smsRuKey'],
+        ]);
     }
 }

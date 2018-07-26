@@ -7,4 +7,5 @@ return [
     'staticHostInfo' => 'http://static.sh.com',
     'mailChimpKey' => '',
     'mailChimpListId' => '',
+    'smsRuKey' => '',
 ];
