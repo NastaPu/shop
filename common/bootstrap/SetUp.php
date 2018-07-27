@@ -10,6 +10,7 @@ use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
 use shop\services\newsletter\Newsletter;
+use shop\services\sms\LoggedSender;
 use shop\services\sms\SmsRu;
 use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
@@ -65,8 +66,10 @@ class SetUp implements BootstrapInterface
             );
         });
 
-        $container->setSingleton(SmsSender::class, SmsRu::class, [
-            $app->params['smsRuKey'],
-        ]);
+        $container->setSingleton(SmsSender::class, function () use ($app) {
+            return new LoggedSender(
+                    new SmsRu($app->params['smsRuKey']), \Yii::getLogger()
+            );
+        });
     }
 }
