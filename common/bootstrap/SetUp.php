@@ -9,12 +9,19 @@ use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
+use shop\dispatcher\EventDispatcher;
+use shop\dispatcher\SimpleEventDispatcher;
+use shop\listeners\UserSignupConfirmedListener;
+use shop\listeners\UserSignupRequestedListener;
+use shop\services\auth\events\UserSignupConfirmed;
+use shop\services\auth\events\UserSignupRequested;
 use shop\services\newsletter\Newsletter;
 use shop\services\sms\LoggedSender;
 use shop\services\sms\SmsRu;
 use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
 use shop\services\yandex\YandexMarket;
+use yii\di\Container;
 use yii\rbac\ManagerInterface;
 use yii\base\BootstrapInterface;
 use yii\mail\MailerInterface;
@@ -27,22 +34,22 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(MailerInterface::class, function () use ($app) {
             return $app->mailer;
         });
-       // $container->setSingleton(ContactService::class,[],[
-       //     $app->params['adminEmail'],
-       // ]);
+        // $container->setSingleton(ContactService::class,[],[
+        //     $app->params['adminEmail'],
+        // ]);
 
         $container->setSingleton('cache', function () use ($app) {
             return $app->cache;
         });
 
-       /* $container->set(CategoryUrlRule::class, [], [
-            Instance::of(CategoryReadRepository::class),
-            Instance::of('cache'),
-        ]);*/
+        /* $container->set(CategoryUrlRule::class, [], [
+             Instance::of(CategoryReadRepository::class),
+             Instance::of('cache'),
+         ]);*/
 
         $container->setSingleton(Client::class, function () {
             return ClientBuilder::create()->build();
-       });
+        });
 
         $container->setSingleton(Cart::class, function () use ($app) {
             return new Cart(
@@ -61,15 +68,24 @@ class SetUp implements BootstrapInterface
 
         $container->setSingleton(Newsletter::class, function () use ($app) {
             return new MailChimp(
-                    new \DrewM\MailChimp\MailChimp($app->params['mailChimpKey']),
-            $app->params['mailChimpListId']
+                new \DrewM\MailChimp\MailChimp($app->params['mailChimpKey']),
+                $app->params['mailChimpListId']
             );
         });
 
         $container->setSingleton(SmsSender::class, function () use ($app) {
             return new LoggedSender(
-                    new SmsRu($app->params['smsRuKey']), \Yii::getLogger()
+                new SmsRu($app->params['smsRuKey']), \Yii::getLogger()
             );
         });
+
+        $container->setSingleton(EventDispatcher::class, function (Container $container) {
+            return new SimpleEventDispatcher([
+                UserSignUpRequested::class => [
+                    [$container->get(UserSignupRequestedListener::class), 'handle'],
+                ],
+            ]);
+        });
     }
+
 }
