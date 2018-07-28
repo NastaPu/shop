@@ -4,10 +4,10 @@ namespace shop\services\auth;
 
 use shop\access\Rbac;
 use shop\dispatcher\EventDispatcher;
+use shop\entities\User\events\UserSignupRequested;
 use shop\entities\User\User;
 use shop\forms\auth\SignupForm;
 use shop\repositories\UserRepository;
-use shop\services\auth\events\UserSignupRequested;
 use shop\services\manage\TransactionManager;
 use shop\services\RoleManager;
 
@@ -21,11 +21,13 @@ class SignupService
     public function __construct(
         RoleManager $roles,
         TransactionManager $transaction,
-        UserRepository $users
+        UserRepository $users,
+        EventDispatcher $dispatcher
     ) {
         $this->transaction = $transaction;
         $this->roles = $roles;
         $this->users = $users;
+        $this->dispatcher = $dispatcher;
     }
 
     public function signup(SignupForm $form):void
@@ -41,6 +43,8 @@ class SignupService
             $this->users->save($user);
             $this->roles->assign($user->id, Rbac::ROLE_USER);
         });
+
+        $this->dispatcher->dispatch(new UserSignupRequested($user));
     }
 
     public function confirm($token): void

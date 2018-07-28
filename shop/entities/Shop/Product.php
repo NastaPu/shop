@@ -3,6 +3,8 @@
 namespace shop\entities\Shop;
 
 use shop\entities\behavior\MetaBehavior;
+use shop\entities\EventTrait;
+use shop\entities\Shop\events\ProductAppearedInStock;
 use shop\entities\Shop\queries\ProductQuery;
 use shop\entities\User\WishList;
 use yii\db\ActiveRecord;
@@ -45,6 +47,8 @@ use yii\web\UploadedFile;
  */
 class Product extends ActiveRecord
 {
+    use EventTrait;
+
     const STATUS_DRAFT = 0;
     const STATUS_ACTIVE = 1;
 
@@ -76,10 +80,18 @@ class Product extends ActiveRecord
         $this->meta = $meta;
     }
 
-    public function setQuantity($quantity):void
+    public function changeQuantity($quantity):void
     {
         if($this->modifications) {
             throw  new \DomainException('You can change quantity only in modification');
+        }
+        $this->setQuantity($quantity);
+    }
+
+    private function setQuantity($quantity): void
+    {
+        if ($this->quantity == 0 && $quantity > 0) {
+            $this->recordEvent(new ProductAppearedInStock($this));
         }
         $this->quantity = $quantity;
     }
@@ -98,7 +110,7 @@ class Product extends ActiveRecord
         if ($quantity > $this->quantity) {
             throw new \DomainException('Only ' . $this->quantity . ' items are available.');
         }
-        $this->quantity -= $quantity;
+        $this->setQuantity($this->quantity - $quantity);
     }
 
     //value
@@ -396,9 +408,9 @@ class Product extends ActiveRecord
     private function updateModifications(array $modifications): void
     {
         $this->modifications = $modifications;
-        $this->quantity = array_sum(array_map(function (Modification $modification) {
+        $this->setQuantity(array_sum(array_map(function (Modification $modification) {
             return $modification->quantity;
-            }, $this->modifications));
+            }, $this->modifications)));
     }
 
     public function isAvailable():bool

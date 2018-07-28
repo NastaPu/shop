@@ -12,6 +12,8 @@ use shop\cart\storage\HybridStorage;
 use shop\dispatcher\DeferredEventDispatcher;
 use shop\dispatcher\EventDispatcher;
 use shop\dispatcher\SimpleEventDispatcher;
+use shop\entities\Shop\events\ProductAppearedInStock;
+use shop\listeners\Shop\Product\ProductAppearedInStockListener;
 use shop\listeners\UserSignupRequestedListener;
 use shop\entities\User\events\UserSignupRequested;
 use shop\services\newsletter\Newsletter;
@@ -20,6 +22,7 @@ use shop\services\sms\SmsRu;
 use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
 use shop\services\yandex\YandexMarket;
+use yii\base\ErrorHandler;
 use yii\caching\Cache;
 use yii\di\Container;
 use yii\rbac\ManagerInterface;
@@ -71,11 +74,16 @@ class SetUp implements BootstrapInterface
             );
         });
 
+        $container->setSingleton(ErrorHandler::class, function () use ($app) {
+            return $app->errorHandler;
+        });
+
         $container->setSingleton(EventDispatcher::class, DeferredEventDispatcher::class);
 
         $container->setSingleton(DeferredEventDispatcher::class, function (Container $container) {
             return new DeferredEventDispatcher(new SimpleEventDispatcher($container, [
                 UserSignUpRequested::class => [UserSignupRequestedListener::class],
+                ProductAppearedInStock::class => [ProductAppearedInStockListener::class],
             ]));
         });
     }

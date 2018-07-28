@@ -2,10 +2,18 @@
 
 namespace shop\repositories;
 
+use shop\dispatcher\EventDispatcher;
 use shop\entities\Shop\Product;
 
 class ProductRepository
 {
+    private $dispatcher;
+
+    public function __construct(EventDispatcher $dispatcher)
+    {
+        $this->dispatcher = $dispatcher;
+    }
+
     public function get($id): Product
     {
         if (!$product = Product::findOne($id)) {

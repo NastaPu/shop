@@ -40,7 +40,7 @@ class UserRepository
         if (!$user->save()) {
             throw new \DomainException('Saving error');
         }
-        $this->dispatcher->dispatchAll($user->releaseEvent());
+        //$this->dispatcher->dispatchAll($user->releaseEvent());
     }
 
     public function getBy(array $value):User
@@ -54,5 +54,18 @@ class UserRepository
     public function get($id):User
     {
         return $this->getBy(['id' => $id]);
+    }
+
+    /**
+     * @param $productId
+     * @return iterable|User[]
+     */
+    public function getAllByProductInWishList($productId): iterable
+    {
+        return User::find()
+            ->alias('u')
+            ->joinWith('wishlistItems w', false, 'INNER JOIN')
+            ->andWhere(['w.product_id' => $productId])
+            ->each();
     }
 }

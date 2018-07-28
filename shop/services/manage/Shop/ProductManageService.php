@@ -2,7 +2,9 @@
 
 namespace shop\services\manage\Shop;
 
+use shop\dispatcher\EventDispatcher;
 use shop\entities\Shop\Category;
+use shop\entities\Shop\events\ProductAppearedInStock;
 use shop\entities\Shop\Meta;
 use shop\entities\Shop\Product;
 use shop\entities\Shop\Tag;
@@ -25,19 +27,22 @@ class ProductManageService
     private $categories;
     private $tags;
     private $transaction;
+    private $dispatcher;
 
     public function __construct(
         ProductRepository $products,
         BrandRepository $brands,
         CategoryRepository $categories,
         TagRepository $tags,
-        TransactionManager $transaction
+        TransactionManager $transaction,
+        EventDispatcher $dispatcher
     ) {
         $this->products = $products;
         $this->brands = $brands;
         $this->categories = $categories;
         $this->tags = $tags;
         $this->transaction = $transaction;
+        $this->dispatcher = $dispatcher;
     }
 
     public function create(ProductCreateForm $form): Product
@@ -150,8 +155,9 @@ class ProductManageService
     public function changeQuantity($id, QuantityForm $form)
     {
         $product = $this->products->get($id);
-        $product->setQuantity($form->quantity);
+        $product->changeQuantity($form->quantity);
         $this->products->save($product);
+
     }
 
     //category
@@ -186,6 +192,7 @@ class ProductManageService
         $product = $this->products->get($id);
         $product->setPrice($form->new, $form->old);
         $this->products->save($product);
+        $this->dispatcher->dispatch(new ProductAppearedInStock($product));
     }
 
     //photo
