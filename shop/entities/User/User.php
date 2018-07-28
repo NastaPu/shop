@@ -2,6 +2,8 @@
 namespace shop\entities\User;
 
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
+use shop\entities\EventTrait;
+use shop\entities\User\events\UserSignupRequested;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -28,6 +30,8 @@ use yii\db\ActiveQuery;
  */
 class User extends ActiveRecord
 {
+    use EventTrait;
+
     const STATUS_WAIT = 0;
     const STATUS_ACTIVE = 10;
 
@@ -41,6 +45,7 @@ class User extends ActiveRecord
         $user->created_at = time();
         $user->status = self::STATUS_ACTIVE;
         $user->generateAuthKey();
+        $user->recordEvent(new UserSignUpRequested($user));
         return $user;
     }
 

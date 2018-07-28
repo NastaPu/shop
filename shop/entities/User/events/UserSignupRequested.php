@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\services\auth\events;
+namespace shop\entities\User\events;
 
 use shop\entities\User\User;
 

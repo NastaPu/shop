@@ -9,10 +9,11 @@ use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
+use shop\dispatcher\DeferredEventDispatcher;
 use shop\dispatcher\EventDispatcher;
 use shop\dispatcher\SimpleEventDispatcher;
 use shop\listeners\UserSignupRequestedListener;
-use shop\services\auth\events\UserSignupRequested;
+use shop\entities\User\events\UserSignupRequested;
 use shop\services\newsletter\Newsletter;
 use shop\services\sms\LoggedSender;
 use shop\services\sms\SmsRu;
@@ -70,12 +71,12 @@ class SetUp implements BootstrapInterface
             );
         });
 
-        $container->setSingleton(EventDispatcher::class, function (Container $container) {
-            return new SimpleEventDispatcher([
-                UserSignUpRequested::class => [
-                    [$container->get(UserSignupRequestedListener::class), 'handle'],
-                ],
-            ]);
+        $container->setSingleton(EventDispatcher::class, DeferredEventDispatcher::class);
+
+        $container->setSingleton(DeferredEventDispatcher::class, function (Container $container) {
+            return new DeferredEventDispatcher(new SimpleEventDispatcher($container, [
+                UserSignUpRequested::class => [UserSignupRequestedListener::class],
+            ]));
         });
     }
 

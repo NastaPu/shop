@@ -2,7 +2,7 @@
 
 namespace shop\listeners;
 
-use shop\services\auth\events\UserSignUpRequested;
+use shop\entities\User\events\UserSignUpRequested;
 use Yii;
 
 class UserSignupRequestedListener
