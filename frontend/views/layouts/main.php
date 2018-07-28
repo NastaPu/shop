@@ -38,39 +38,10 @@ OwlCarouselAsset::register($this);
 <?php $this->beginBody() ?>
 <nav id="top">
     <div class="container">
-        <div class="pull-left">
-            <form action="/index.php?route=common/currency/currency" method="post"
-                  enctype="multipart/form-data" id="form-currency">
-                <div class="btn-group">
-                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                        <strong>$</strong>
-                        <span class="hidden-xs hidden-sm hidden-md">Currency</span> <i class="fa fa-caret-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro
-                            </button>
-                        </li>
-                        <li>
-                            <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound
-                                Sterling
-                            </button>
-                        </li>
-                        <li>
-                            <button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US
-                                Dollar
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <input type="hidden" name="code" value=""/>
-                <input type="hidden" name="redirect" value="/index.php?route=common/home"/>
-            </form>
-        </div>
         <div id="top-links" class="nav pull-right">
             <ul class="list-inline">
                 <li><a href="/index.php?route=information/contact"><i class="fa fa-phone"></i></a>
-                    <span class="hidden-xs hidden-sm hidden-md">123456789</span></li>
+                    <span class="hidden-xs hidden-sm hidden-md">8-(800)-800-800</span></li>
                 <li class="dropdown"><a href="/index.php?route=account/account" title="My Account"
                                         class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span
                                 class="hidden-xs hidden-sm hidden-md">My Account</span> <span class="caret"></span></a>
@@ -157,45 +128,22 @@ OwlCarouselAsset::register($this);
             <div class="col-sm-3">
                 <h5>Information</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/index.php?route=information/information&amp;information_id=4">About
-                            Us</a></li>
-                    <li><a href="/index.php?route=information/information&amp;information_id=6">Delivery
-                            Information</a></li>
-                    <li><a href="/index.php?route=information/information&amp;information_id=3">Privacy
-                            Policy</a></li>
-                    <li><a href="/index.php?route=information/information&amp;information_id=5">Terms
-                            &amp; Conditions</a></li>
+                    <li><a href="http://sh.com/about/repair">Repair</a></li>
+                    <li><a href="http://sh.com/about/inspection">Inspection</a></li>
+
                 </ul>
             </div>
+
             <div class="col-sm-3">
-                <h5>Customer Service</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/index.php?route=information/contact">Contact Us</a></li>
-                    <li><a href="/index.php?route=account/return/add">Returns</a></li>
-                    <li><a href="/index.php?route=information/sitemap">Site Map</a></li>
-                </ul>
             </div>
+
             <div class="col-sm-3">
-                <h5>Extras</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/index.php?route=product/manufacturer">Brands</a></li>
-                    <li><a href="/index.php?route=account/voucher">Gift Certificates</a></li>
-                    <li><a href="/index.php?route=affiliate/account">Affiliates</a></li>
-                    <li><a href="/index.php?route=product/special">Specials</a></li>
-                </ul>
             </div>
+
             <div class="col-sm-3">
-                <h5>My Account</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/index.php?route=account/account">My Account</a></li>
-                    <li><a href="/index.php?route=account/order">Order History</a></li>
-                    <li><a href="/index.php?route=account/wishlist">Wish List</a></li>
-                    <li><a href="/index.php?route=account/newsletter">Newsletter</a></li>
-                </ul>
             </div>
         </div>
         <hr>
-        <p>Powered By <a href="http://www.opencart.com">OpenCart</a><br/> Your Store &copy; 2017</p>
     </div>
 </footer>
 <?php $this->endBody() ?>

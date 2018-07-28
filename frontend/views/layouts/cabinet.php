@@ -17,8 +17,7 @@ use yii\helpers\Url;
                 <a href="<?= Html::encode(Url::to(['/site/request-password-reset'])) ?>" class="list-group-item">Forgotten Password</a>
                 <a href=<?= Html::encode(Url::to(['/cabinet/default/index'])) ?> class="list-group-item">My Account</a>
                 <a href=<?= Html::encode(Url::to(['/cabinet/wishlist/index'])) ?> class="list-group-item">Wish List</a>
-                <a href="/account/order" class="list-group-item">Order History</a>
-                <a href="/account/newsletter" class="list-group-item">Newsletter</a>
+                <a href=<?= Html::encode(Url::to(['/cabinet/order/index'])) ?> class="list-group-item">Order History</a>
             </div>
         </aside>
     </div>
