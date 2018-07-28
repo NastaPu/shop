@@ -86,6 +86,13 @@ class SetUp implements BootstrapInterface
                 ProductAppearedInStock::class => [ProductAppearedInStockListener::class],
             ]));
         });
+
+        /*
+        $container->setSingleton(Filesystem::class, function () use ($app) {
+            return new Filesystem(new Ftp($app->params['ftp']));
+        });
+         $container->set(ImageUploadBehavior::class, FlySystemImageUploadBehavior::class);
+        */
     }
 
 }

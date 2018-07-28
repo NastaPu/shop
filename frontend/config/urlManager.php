@@ -4,6 +4,7 @@ return [
         'hostInfo' => $params['frontendHostInfo'],
         'enablePrettyUrl' => true,
         'showScriptName' => false,
+        'cache' => false,
         'rules' => [
             'catalog' => 'shop/catalog/index',
             '' => 'site/index',
@@ -13,6 +14,7 @@ return [
             'cabinet/network/attach/<authclient:.+>' => 'cabinet/network/attach',
             '<_a:about|contact|signup|login|logout>' => 'site/<_a>',
 
+            ['class' => 'frontend\urls\CategoryUrlRule'],
             ['class' => 'frontend\urls\PageUrlRule'],
 
             '<_c:[\w\-]+>' => '<_c>/index',
