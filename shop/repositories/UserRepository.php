@@ -2,18 +2,22 @@
 
 namespace shop\repositories;
 
+use shop\dispatcher\EventDispatcher;
 use shop\entities\User\User;
 
 class UserRepository
 {
+    private $dispatcher;
+
+    public function __construct(EventDispatcher $dispatcher)
+    {
+        $this->dispatcher = $dispatcher;
+    }
+
     public function findByUsernameOrEmail($value): ?User
     {
         $user = User::find()->where(['username' => $value])->one();
-        //if($user == null ) {
-          //  throw new \DomainException('Invalid login or password');
-      // }
         return $user;
-       // return User::find()->andWhere(['username' => $value])->one();
     }
 
     public function getByEmailConfirmToken($token) :?User
@@ -36,6 +40,7 @@ class UserRepository
         if (!$user->save()) {
             throw new \DomainException('Saving error');
         }
+        $this->dispatcher->dispatchAll($user->releaseEvent());
     }
 
     public function getBy(array $value):User

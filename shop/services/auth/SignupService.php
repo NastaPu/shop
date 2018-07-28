@@ -21,13 +21,11 @@ class SignupService
     public function __construct(
         RoleManager $roles,
         TransactionManager $transaction,
-        UserRepository $users,
-        EventDispatcher $dispatcher
+        UserRepository $users
     ) {
         $this->transaction = $transaction;
         $this->roles = $roles;
         $this->users = $users;
-        $this->dispatcher = $dispatcher;
     }
 
     public function signup(SignupForm $form):void
@@ -43,8 +41,6 @@ class SignupService
             $this->users->save($user);
             $this->roles->assign($user->id, Rbac::ROLE_USER);
         });
-
-        $this->dispatcher->dispatch(new UserSignupRequested($user));
     }
 
     public function confirm($token): void
