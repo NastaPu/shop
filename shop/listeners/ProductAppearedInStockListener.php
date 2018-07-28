@@ -8,6 +8,7 @@ use shop\entities\User\User;
 use shop\repositories\UserRepository;
 use Yii;
 use yii\base\ErrorHandler;
+use yii\mail\MailerInterface;
 
 class ProductAppearedInStockListener
 {
@@ -15,10 +16,11 @@ class ProductAppearedInStockListener
     private $mailer;
     private $errorHandler;
 
-    public function __construct(UserRepository $users, ErrorHandler $errorHandler)
+    public function __construct(UserRepository $users, ErrorHandler $errorHandler, MailerInterface $mailer)
     {
         $this->users = $users;
         $this->errorHandler = $errorHandler;
+        $this->mailer = $mailer;
     }
 
     public function handle(ProductAppearedInStock $event): void
@@ -38,7 +40,7 @@ class ProductAppearedInStockListener
 
     private function sendEmailNotification(User $user, Product $product): void
     {
-        $sent = Yii::$app->mailer
+        $sent = $this->mailer
             ->compose(
                 ['html' => 'available-html', 'text' => 'available-text'],
                 ['user' => $user, 'product' => $product]

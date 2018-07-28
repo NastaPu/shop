@@ -34,6 +34,7 @@ class SetUp implements BootstrapInterface
     public function bootstrap($app):void//вызывается в начале загрузки приложения
     {
         $container = \Yii::$container;
+
         $container->setSingleton(MailerInterface::class, function () use ($app) {
             return $app->mailer;
         });
