@@ -11,9 +11,7 @@ use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
 use shop\dispatcher\EventDispatcher;
 use shop\dispatcher\SimpleEventDispatcher;
-use shop\listeners\UserSignupConfirmedListener;
 use shop\listeners\UserSignupRequestedListener;
-use shop\services\auth\events\UserSignupConfirmed;
 use shop\services\auth\events\UserSignupRequested;
 use shop\services\newsletter\Newsletter;
 use shop\services\sms\LoggedSender;
@@ -21,6 +19,7 @@ use shop\services\sms\SmsRu;
 use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
 use shop\services\yandex\YandexMarket;
+use yii\caching\Cache;
 use yii\di\Container;
 use yii\rbac\ManagerInterface;
 use yii\base\BootstrapInterface;
@@ -34,18 +33,10 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(MailerInterface::class, function () use ($app) {
             return $app->mailer;
         });
-        // $container->setSingleton(ContactService::class,[],[
-        //     $app->params['adminEmail'],
-        // ]);
 
-        $container->setSingleton('cache', function () use ($app) {
+        $container->setSingleton(Cache::class, function () use ($app) {
             return $app->cache;
         });
-
-        /* $container->set(CategoryUrlRule::class, [], [
-             Instance::of(CategoryReadRepository::class),
-             Instance::of('cache'),
-         ]);*/
 
         $container->setSingleton(Client::class, function () {
             return ClientBuilder::create()->build();

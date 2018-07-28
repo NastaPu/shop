@@ -5,7 +5,6 @@ return [
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
-
             'catalog' => 'shop/catalog/index',
             '' => 'site/index',
             'site/confirm/<token:.+>' => 'site/confirm',
@@ -13,6 +12,9 @@ return [
             'cabinet' => 'cabinet/default/index',
             'cabinet/network/attach/<authclient:.+>' => 'cabinet/network/attach',
             '<_a:about|contact|signup|login|logout>' => 'site/<_a>',
+
+            ['class' => 'frontend\urls\PageUrlRule'],
+
             '<_c:[\w\-]+>' => '<_c>/index',
             '<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
             '<_c:[\w\-]+>/<_a:[\w-]+>' => '<_c>/<_a>',
